@@ -17,12 +17,10 @@
 }
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);color:var(--text-primary);}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
-
-/* ── WRAPPER ── */
-.dashboard{max-width:1200px;margin:0 auto;padding:16px;}
+.dashboard{max-width:1300px;margin:0 auto;padding:16px;}
 @media(max-width:600px){.dashboard{padding:10px 8px;}}
 
-/* ── TOP BAR ── */
+/* TOP BAR */
 .top-bar{background:var(--bbl);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;border-radius:var(--radius-lg);margin-bottom:16px;gap:10px;flex-wrap:wrap;}
 .top-bar-l{display:flex;align-items:center;gap:12px;}
 .logo-mk{width:44px;height:44px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:10px;overflow:hidden;background:#fff;padding:4px;}
@@ -31,7 +29,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 .bsub{font-size:10px;color:rgba(255,255,255,0.6);}
 .pbadge{background:rgba(255,255,255,0.15);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.9);white-space:nowrap;}
 
-/* ── KPI GRID ── */
+/* KPI GRID */
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;}
 @media(max-width:700px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:380px){.kpi-grid{grid-template-columns:1fr;}}
@@ -43,7 +41,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 .bu{color:#1B6A2E;background:#E6F5EB;padding:2px 5px;border-radius:3px;font-weight:500;font-size:10px;}
 .bw{color:#6A4A10;background:#FBF3E0;padding:2px 5px;border-radius:3px;font-weight:500;font-size:10px;}
 
-/* ── CHARTS ROW ── */
+/* CHARTS ROW */
 .charts-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;}
 .charts-row.stacked{grid-template-columns:1fr;}
 .chart-card{background:var(--bg-primary);border-radius:var(--radius-lg);border:0.5px solid var(--bdr);padding:14px;}
@@ -53,9 +51,9 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 .leg-i{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text-secondary);}
 .leg-d{width:9px;height:9px;border-radius:2px;flex-shrink:0;}
 
-/* ── SECTION CARD ── */
+/* SECTION CARD */
 .sec-card{background:var(--bg-primary);border-radius:var(--radius-lg);border:0.5px solid var(--bdr);padding:14px;margin-bottom:14px;}
-.sec-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+.sec-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
 .sec-ttl{font-size:13px;font-weight:600;color:var(--text-primary);}
 .view-tabs{display:flex;border:0.5px solid var(--bdr);border-radius:8px;overflow:hidden;}
 .vtab{padding:6px 12px;font-size:11px;font-weight:500;cursor:pointer;background:var(--bg-primary);color:var(--text-secondary);border:none;transition:all 0.15s;}
@@ -63,7 +61,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 .vtab:not(.active):hover{background:var(--bbl2);}
 @media(max-width:420px){.vtab{padding:6px 8px;font-size:10px;}}
 
-/* ── TABLE ── */
+/* TABLE */
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .tbl{width:100%;border-collapse:collapse;font-size:11px;table-layout:fixed;}
 .tbl th{text-align:left;padding:7px 8px;font-size:10px;font-weight:500;color:var(--text-secondary);border-bottom:1px solid var(--bdr);background:var(--bg-secondary);text-transform:uppercase;letter-spacing:0.3px;white-space:nowrap;}
@@ -79,80 +77,124 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 .pill-low{background:#FAEAE8;color:#8A2020;}
 .sales-code{font-family:var(--font-mono);font-size:10px;font-weight:600;color:var(--bbl);background:var(--bbl2);padding:2px 6px;border-radius:4px;white-space:nowrap;}
 
-/* ── SUMMARY BAR ── */
+/* SUMMARY BAR */
 .summ-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px;}
 @media(max-width:600px){.summ-bar{grid-template-columns:repeat(2,1fr);}}
 .summ-cell{background:var(--bg-secondary);border-radius:var(--radius-md);padding:9px 10px;}
 .summ-lbl{font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;margin-bottom:3px;}
 .summ-val{font-size:14px;font-weight:600;color:var(--text-primary);}
 
-/* ── YEAR TAGS ── */
+/* YEAR TAGS */
 .yr-select-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;}
 .yr-tag{padding:3px 12px;border-radius:20px;font-size:11px;font-weight:500;cursor:pointer;border:1.5px solid var(--bdr);background:var(--bg-primary);color:var(--bbl);}
 .yr-tag.active{background:var(--bbl);color:#fff;border-color:var(--bbl);}
 
-/* ── CELL LEGEND ── */
+/* CELL LEGEND */
 .cell-legend{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:8px 12px;background:var(--bg-secondary);border-radius:var(--radius-md);flex-wrap:wrap;}
 .cli{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-secondary);}
 .cls{width:26px;height:13px;border-radius:3px;flex-shrink:0;}
 
-/* ── SETTINGS BUTTON ── */
-.btn-setting{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.3);border-radius:8px;padding:6px 14px;font-size:11px;font-weight:500;color:#fff;cursor:pointer;transition:all 0.18s;white-space:nowrap;font-family:inherit;}
-.btn-setting:hover{background:rgba(255,255,255,0.28);border-color:rgba(255,255,255,0.55);}
-.btn-setting i{font-size:14px;}
+/* FILTER BAR */
+.filter-bar{background:var(--bg-primary);border-radius:var(--radius-lg);border:0.5px solid var(--bdr);padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.filter-label{font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.4px;white-space:nowrap;}
+.filter-select{padding:5px 10px;font-size:11px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg-secondary);color:var(--text-primary);cursor:pointer;min-width:140px;outline:none;transition:border-color 0.15s;}
+.filter-select:focus{border-color:var(--bbl);}
+.filter-select:disabled{opacity:0.45;cursor:not-allowed;}
+.filter-sep{width:1px;height:22px;background:var(--bdr);flex-shrink:0;}
 
-/* ── MODAL ── */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,20,50,0.5);z-index:1000;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(2px);}
-.modal-overlay.open{display:flex;}
-.modal-box{background:#fff;border-radius:16px;width:100%;max-width:560px;overflow:hidden;box-shadow:0 12px 50px rgba(0,0,0,0.22);display:flex;flex-direction:column;}
-.modal-header{background:var(--bbl);padding:15px 20px;display:flex;align-items:center;justify-content:space-between;}
-.modal-title{font-size:14px;font-weight:600;color:#fff;display:flex;align-items:center;gap:8px;}
-.modal-close{background:rgba(255,255,255,0.12);border:none;color:rgba(255,255,255,0.9);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:background 0.15s;line-height:1;}
-.modal-close:hover{background:rgba(255,255,255,0.28);}
-.modal-body{padding:22px 20px;display:flex;flex-direction:column;gap:16px;}
+/* UNIT TOGGLE */
+.unit-toggle{display:flex;border:1.5px solid var(--bbl);border-radius:8px;overflow:hidden;margin-left:auto;}
+.utab{padding:5px 14px;font-size:11px;font-weight:600;cursor:pointer;background:var(--bg-primary);color:var(--bbl);border:none;transition:all 0.15s;white-space:nowrap;}
+.utab.active{background:var(--bbl);color:#fff;}
+.utab:not(.active):hover{background:var(--bbl2);}
 
-/* ── UPLOAD CARDS ── */
-.upload-section{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;}
-.upload-sec-hdr{background:var(--bg-secondary);padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--bdr);}
-.upload-sec-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
-.upload-sec-icon.green{background:#E6F5EB;color:#1B6A2E;}
-.upload-sec-icon.blue{background:var(--bbl2);color:var(--bbl);}
-.upload-sec-info{flex:1;}
-.upload-sec-title{font-size:13px;font-weight:600;color:var(--text-primary);}
-.upload-sec-sub{font-size:10px;color:var(--text-secondary);margin-top:1px;}
-.upload-body{padding:14px;}
-.drop-zone{border:2px dashed var(--bdr);border-radius:8px;padding:18px 12px;text-align:center;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;}
-.drop-zone:hover,.drop-zone.drag-over{border-color:var(--bbl);background:var(--bbl2);}
-.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;z-index:1;}
-.drop-icon{font-size:26px;color:var(--text-secondary);margin-bottom:6px;}
-.drop-txt{font-size:12px;font-weight:500;color:var(--text-primary);}
-.drop-sub{font-size:10px;color:var(--text-secondary);margin-top:3px;}
-.file-info{display:none;margin-top:10px;background:var(--bg-secondary);border-radius:7px;padding:8px 12px;align-items:center;gap:8px;}
-.file-info.show{display:flex;}
-.file-info-name{font-size:11px;font-weight:500;color:var(--text-primary);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.file-info-size{font-size:10px;color:var(--text-secondary);white-space:nowrap;}
-.btn-clear-file{background:none;border:none;color:var(--text-secondary);cursor:pointer;font-size:14px;padding:0;line-height:1;}
-.btn-clear-file:hover{color:#8A2020;}
-.upload-status{display:none;margin-top:8px;border-radius:7px;padding:7px 11px;font-size:11px;font-weight:500;align-items:center;gap:7px;}
-.upload-status.show{display:flex;}
-.upload-status.ok{background:#E6F5EB;color:#1B6A2E;}
-.upload-status.err{background:#FAEAE8;color:#8A2020;}
-.upload-status.loading{background:var(--bbl2);color:var(--bbl);}
-.modal-footer{padding:14px 20px;background:var(--bg-secondary);border-top:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-.btn-process{background:var(--bbl);color:#fff;border:none;border-radius:8px;padding:9px 22px;font-size:12px;font-weight:600;cursor:pointer;transition:background 0.15s;display:flex;align-items:center;gap:6px;font-family:inherit;}
-.btn-process:hover{background:var(--bbm);}
-.footer-hint{font-size:10px;color:var(--text-secondary);line-height:1.5;}
-.footer-hint strong{color:var(--text-primary);}
-.dl-tpl{font-size:10px;color:var(--bbl);text-decoration:none;display:inline-flex;align-items:center;gap:3px;font-weight:500;}
-.dl-tpl:hover{text-decoration:underline;}
+/* NO DATA */
+.no-data-row td{text-align:center;color:var(--text-secondary);font-size:11px;padding:18px;}
 
-/* TOAST */
-.toast{position:fixed;bottom:24px;right:24px;background:#1B3F7A;color:#fff;padding:10px 18px;border-radius:8px;font-size:12px;font-weight:500;z-index:2000;opacity:0;transform:translateY(10px);transition:all 0.25s;pointer-events:none;display:flex;align-items:center;gap:8px;max-width:340px;}
-.toast.show{opacity:1;transform:translateY(0);}
+/* SETTINGS BUTTON */
+.btn-setting{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;color:#fff;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.btn-setting:hover{background:rgba(255,255,255,0.25);border-color:rgba(255,255,255,0.5);}
+.btn-setting i{font-size:15px;}
+
+/* OVERLAY */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,20,50,0.55);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;}
+.modal-overlay.active{display:flex;}
+
+/* AUTH MODAL */
+.auth-modal{background:#fff;border-radius:16px;padding:32px 28px;width:340px;max-width:92vw;box-shadow:0 20px 60px rgba(0,0,0,0.18);position:relative;}
+.auth-modal h3{font-size:16px;font-weight:700;color:var(--bbl);margin-bottom:4px;}
+.auth-modal p{font-size:12px;color:var(--text-secondary);margin-bottom:20px;}
+.auth-field{margin-bottom:14px;}
+.auth-field label{display:block;font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:5px;}
+.auth-field input{width:100%;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:8px;font-size:13px;color:var(--text-primary);outline:none;transition:border-color 0.15s;background:var(--bg-secondary);}
+.auth-field input:focus{border-color:var(--bbl);}
+.auth-error{font-size:11px;color:#E24B4A;margin-top:-8px;margin-bottom:10px;display:none;padding:6px 10px;background:#FAEAE8;border-radius:6px;}
+.auth-error.show{display:block;}
+.auth-btns{display:flex;gap:8px;margin-top:20px;}
+.btn-primary{flex:1;padding:10px;background:var(--bbl);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.15s;}
+.btn-primary:hover{background:#2A5BA8;}
+.btn-secondary{flex:1;padding:10px;background:var(--bg-secondary);color:var(--text-secondary);border:1px solid var(--bdr);border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;}
+
+/* SETTINGS PANEL */
+.settings-panel{background:#fff;border-radius:16px;padding:0;width:620px;max-width:95vw;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.18);}
+.settings-header{background:var(--bbl);padding:18px 22px;display:flex;align-items:center;justify-content:space-between;border-radius:16px 16px 0 0;}
+.settings-header h3{font-size:15px;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;}
+.settings-close{background:rgba(255,255,255,0.15);border:none;color:#fff;width:30px;height:30px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:background 0.15s;}
+.settings-close:hover{background:rgba(255,255,255,0.3);}
+.settings-body{overflow-y:auto;padding:22px;}
+.settings-section{margin-bottom:24px;}
+.settings-section-title{font-size:12px;font-weight:700;color:var(--bbl);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;display:flex;align-items:center;gap:6px;padding-bottom:8px;border-bottom:1.5px solid var(--bbl2);}
+.upload-card{border:2px dashed var(--bdr);border-radius:12px;padding:20px;text-align:center;transition:all 0.2s;cursor:pointer;background:var(--bg-secondary);}
+.upload-card:hover{border-color:var(--bbl);background:var(--bbl2);}
+.upload-card.has-file{border-style:solid;border-color:#2EAA4A;background:#E6F5EB;}
+.upload-card i{font-size:28px;color:var(--text-secondary);margin-bottom:8px;display:block;}
+.upload-card.has-file i{color:#2EAA4A;}
+.upload-card-title{font-size:13px;font-weight:600;color:var(--text-primary);margin-bottom:4px;}
+.upload-card-sub{font-size:11px;color:var(--text-secondary);}
+.upload-card input[type=file]{display:none;}
+.upload-status{margin-top:10px;font-size:11px;font-weight:500;padding:6px 10px;border-radius:6px;display:none;}
+.upload-status.success{background:#E6F5EB;color:#1B6A2E;display:block;}
+.upload-status.error{background:#FAEAE8;color:#8A2020;display:block;}
+.upload-status.loading{background:#E6EEF8;color:#0C447C;display:block;}
+.template-info{background:var(--bbl2);border-radius:10px;padding:12px 14px;margin-top:12px;font-size:11px;color:var(--bbl);}
+.template-info strong{display:block;margin-bottom:4px;font-size:12px;}
+.col-tag{display:inline-block;background:#fff;border:1px solid rgba(27,63,122,0.25);border-radius:4px;padding:2px 7px;font-size:10px;font-family:monospace;margin:2px;color:var(--bbl);}
+.settings-footer{padding:16px 22px;border-top:1px solid var(--bdr);background:var(--bg-secondary);border-radius:0 0 16px 16px;}
+.logout-link{font-size:11px;color:var(--text-secondary);cursor:pointer;text-decoration:underline;text-underline-offset:2px;}
+.logout-link:hover{color:#E24B4A;}
+
+/* SETTINGS TABS */
+.settings-tabs{display:flex;border-bottom:1.5px solid var(--bdr);background:var(--bg-secondary);padding:0 22px;}
+.stab{padding:11px 16px;font-size:12px;font-weight:600;cursor:pointer;color:var(--text-secondary);border:none;background:transparent;border-bottom:2px solid transparent;margin-bottom:-1.5px;transition:all 0.15s;display:flex;align-items:center;gap:5px;}
+.stab.active{color:var(--bbl);border-bottom-color:var(--bbl);}
+.stab:not(.active):hover{color:var(--text-primary);background:rgba(27,63,122,0.04);}
+.stab-panel{display:none;}
+.stab-panel.active{display:block;}
+
+/* GDRIVE */
+.gdrive-status-box{border-radius:10px;padding:10px 14px;font-size:11px;margin-top:10px;display:none;}
+.gdrive-status-box.info{background:var(--bbl2);color:var(--bbl);display:block;}
+.gdrive-status-box.success{background:#E6F5EB;color:#1B6A2E;display:block;}
+.gdrive-status-box.error{background:#FAEAE8;color:#8A2020;display:block;}
+.gdrive-status-box.loading{background:#E6EEF8;color:#0C447C;display:block;}
+.gdrive-file-list{margin-top:8px;display:flex;flex-direction:column;gap:4px;}
+.gdrive-file-item{display:flex;align-items:center;justify-content:space-between;background:var(--bg-primary);border:0.5px solid var(--bdr);border-radius:7px;padding:6px 10px;font-size:11px;}
+.gdrive-file-item .fname{color:var(--text-primary);font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.gdrive-file-item .fstatus{font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px;white-space:nowrap;margin-left:8px;}
+.fstatus-ok{background:#E6F5EB;color:#1B6A2E;}
+.fstatus-err{background:#FAEAE8;color:#8A2020;}
+.fstatus-load{background:#E6EEF8;color:#0C447C;}
+.btn-gdrive{display:flex;align-items:center;gap:6px;background:var(--bbl);border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;color:#fff;cursor:pointer;transition:all 0.15s;}
+.btn-gdrive:hover{background:#2A5BA8;}
+.btn-gdrive:disabled{opacity:0.55;cursor:not-allowed;}
+.gdrive-folder-row{display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:10px 12px;background:var(--bbl2);border-radius:8px;font-size:11px;}
+.gdrive-folder-row i{font-size:16px;color:var(--bbl);}
+.gdrive-folder-info{flex:1;}
+.gdrive-folder-info .folder-label{font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;}
+.gdrive-folder-info .folder-id{font-family:monospace;font-size:11px;color:var(--bbl);font-weight:500;}
 </style>
 </head>
 <body>
-
 <div class="dashboard">
 <h2 class="sr-only">Dashboard monitoring penjualan vs target PT. Bukit Inti Makmur Abadi</h2>
 
@@ -166,15 +208,327 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
       <div class="bsub">Sales Performance Monitor</div>
     </div>
   </div>
-  <span class="pbadge"><i class="ti ti-calendar"></i> Mei 2026</span>
-  <button class="btn-setting" onclick="openSettings()"><i class="ti ti-settings"></i> Pengaturan</button>
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+    <span class="pbadge"><i class="ti ti-calendar"></i> Mei 2026</span>
+    <button class="btn-setting" onclick="openSetting()">
+      <i class="ti ti-settings"></i> Setting
+    </button>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: VERIFIKASI ADMIN ══════════════ -->
+<div class="modal-overlay" id="modal-auth">
+  <div class="auth-modal">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+      <div style="width:38px;height:38px;background:var(--bbl2);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+        <i class="ti ti-shield-lock" style="font-size:18px;color:var(--bbl);"></i>
+      </div>
+      <div>
+        <h3 style="margin:0;font-size:15px;font-weight:700;color:var(--bbl);">Verifikasi Admin</h3>
+        <p style="margin:0;font-size:11px;color:var(--text-secondary);">Masukkan kredensial untuk mengakses pengaturan</p>
+      </div>
+    </div>
+    <div class="auth-field">
+      <label>Username</label>
+      <input type="text" id="auth-user" placeholder="Masukkan username..." onkeydown="if(event.key==='Enter')doAuth()">
+    </div>
+    <div class="auth-field">
+      <label>Password</label>
+      <input type="password" id="auth-pass" placeholder="Masukkan password..." onkeydown="if(event.key==='Enter')doAuth()">
+    </div>
+    <div class="auth-error" id="auth-error"><i class="ti ti-alert-circle"></i> Username atau password salah. Silakan coba lagi.</div>
+    <div class="auth-btns">
+      <button class="btn-secondary" onclick="closeAuth()">Batal</button>
+      <button class="btn-primary" onclick="doAuth()"><i class="ti ti-login" style="font-size:13px;margin-right:4px;"></i>Masuk</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ MODAL: SETTINGS PANEL ══════════════ -->
+<div class="modal-overlay" id="modal-settings">
+  <div class="settings-panel">
+    <div class="settings-header">
+      <h3><i class="ti ti-settings"></i> Pengaturan Dashboard</h3>
+      <button class="settings-close" onclick="closeSetting()">✕</button>
+    </div>
+    <!-- ── SETTINGS TABS ── -->
+    <div class="settings-tabs">
+      <button class="stab active" onclick="switchStab('gdrive',this)"><i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Google Drive</button>
+      <button class="stab" onclick="switchStab('upload',this)"><i class="ti ti-upload" style="font-size:13px;"></i> Upload Manual</button>
+      <button class="stab" onclick="switchStab('rbp2',this)"><i class="ti ti-calculator" style="font-size:13px;"></i> Harga RBP</button>
+    </div>
+
+    <div class="settings-body">
+
+      <!-- ══ TAB: GOOGLE DRIVE ══ -->
+      <div class="stab-panel active" id="stab-gdrive">
+
+        <!-- ── Apps Script: already configured ── -->
+        <div style="background:#E6F5EB;border:1.5px solid #2EAA4A;border-radius:10px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
+          <i class="ti ti-circle-check-filled" style="font-size:20px;color:#2EAA4A;flex-shrink:0;"></i>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#1B6A2E;margin-bottom:2px;">Google Apps Script Terhubung</div>
+            <div style="font-size:10px;color:#2D7A3A;line-height:1.5;">Script sudah dikonfigurasi. Klik <b>Muat Semua File dari Drive</b> untuk membaca file dari folder Google Drive Anda.</div>
+          </div>
+          <button onclick="showAppsScriptGuide()" style="margin-left:auto;background:transparent;border:1px solid #2EAA4A;border-radius:7px;padding:5px 10px;font-size:10px;font-weight:600;color:#1B6A2E;cursor:pointer;white-space:nowrap;flex-shrink:0;">
+            <i class="ti ti-settings" style="font-size:10px;"></i> Ubah URL
+          </button>
+        </div>
+
+        <!-- ── Apps Script Guide (hidden by default) ── -->
+        <div id="apps-script-guide" style="display:none;background:var(--bg-secondary);border-radius:10px;padding:14px;margin-bottom:14px;font-size:11px;line-height:1.8;">
+          <div style="font-weight:700;color:var(--bbl);margin-bottom:8px;font-size:12px;"><i class="ti ti-list-numbers"></i> Langkah Setup Apps Script (5 menit)</div>
+          <ol style="padding-left:18px;color:var(--text-primary);margin-bottom:10px;">
+            <li>Buka <a href="https://script.google.com" target="_blank" style="color:var(--bbl);">script.google.com</a> → klik <b>New Project</b></li>
+            <li>Hapus semua kode yang ada, paste kode di bawah ini</li>
+            <li>Klik <b>Deploy → New deployment → Web app</b></li>
+            <li>Set <b>Execute as: Me</b>, <b>Who has access: Anyone</b></li>
+            <li>Klik <b>Deploy</b>, copy URL yang muncul</li>
+            <li>Paste URL di kolom di bawah ini</li>
+          </ol>
+          <div style="background:#FBF3E0;border:1px solid #E8A020;border-radius:8px;padding:8px 12px;margin-bottom:8px;font-size:10px;color:#6A4A10;">
+            <b><i class="ti ti-alert-triangle" style="font-size:11px;"></i> Penting:</b> Kode ini sudah diperbarui dengan fungsi <code style="background:rgba(0,0,0,0.08);padding:1px 4px;border-radius:3px;">doPost()</code> untuk mendukung upload file dari dashboard ke Drive. Jika sebelumnya sudah deploy, buat <b>New Deployment</b> (bukan edit yang lama) agar URL tetap valid.
+          </div>
+          <div style="font-weight:600;color:var(--text-secondary);font-size:10px;text-transform:uppercase;letter-spacing:0.3px;margin-bottom:4px;">Kode Apps Script (copy semua):</div>
+          <div style="position:relative;">
+            <pre id="apps-script-code" style="background:#1a2540;color:#a8d8a8;border-radius:8px;padding:12px;font-size:10px;overflow-x:auto;line-height:1.6;margin:0;">// ══ BACA file dari folder Drive (READ) ══
+function doGet(e) {
+  var folderId = e.parameter.folderId;
+  if (!folderId) return json({error:"folderId required"});
+  try {
+    var folder = DriveApp.getFolderById(folderId);
+    var files = [];
+    var iter = folder.getFiles();
+    while (iter.hasNext()) {
+      var f = iter.next();
+      var name = f.getName();
+      if (name.match(/\.(xlsx|xls)$/i)) {
+        files.push({id: f.getId(), name: name, size: f.getSize(),
+                    modified: f.getLastUpdated().toISOString()});
+      }
+    }
+    return json({files: files});
+  } catch(err) {
+    return json({error: err.message});
+  }
+}
+
+// ══ UPLOAD file ke folder Drive (WRITE) ══
+function doPost(e) {
+  try {
+    // Terima payload dari fetch (postData.contents) ATAU dari form field (parameter.payload)
+    var raw = '';
+    if (e.postData && e.postData.contents) {
+      raw = e.postData.contents;
+    } else if (e.parameter && e.parameter.payload) {
+      raw = e.parameter.payload;
+    }
+    if (!raw) return json({error: 'No payload received'});
+
+    var params   = JSON.parse(raw);
+    var folderId = params.folderId;
+    var fileName = params.fileName;
+    var fileData = params.fileData;   // base64
+    var mimeType = params.mimeType || 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+
+    if (!folderId || !fileName || !fileData) return json({error:"folderId, fileName, fileData required"});
+
+    var folder  = DriveApp.getFolderById(folderId);
+    var decoded = Utilities.base64Decode(fileData);
+    var blob    = Utilities.newBlob(decoded, mimeType, fileName);
+
+    // Hapus file lama dengan nama sama (replace)
+    var existing = folder.getFilesByName(fileName);
+    while (existing.hasNext()) { existing.next().setTrashed(true); }
+
+    var newFile = folder.createFile(blob);
+    return json({success: true, fileId: newFile.getId(), fileName: newFile.getName()});
+  } catch(err) {
+    return json({error: err.message});
+  }
+}
+
+function json(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}</pre>
+            <button onclick="copyAppsScript()" style="position:absolute;top:8px;right:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:5px;padding:3px 10px;font-size:10px;color:#fff;cursor:pointer;" id="btn-copy-script">Copy</button>
+          </div>
+        </div>
+
+        <!-- ── Apps Script URL Input ── -->
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:6px;">URL Apps Script Web App</div>
+          <input type="text" id="gd-script-url" placeholder="https://script.google.com/macros/s/AKfy.../exec" value="https://script.google.com/macros/s/AKfycbzqL_MR-0CLUnPw-nKQkGZKBIpeZZQ5VQ3XbDvj8E3t0qIuTlnGhOlHU3rjVzoIoYyg/exec"
+            style="width:100%;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:8px;font-size:11px;font-family:monospace;outline:none;color:var(--text-primary);background:var(--bg-secondary);margin-bottom:4px;"
+            oninput="saveScriptUrl(this.value)" onfocus="this.style.borderColor='var(--bbl)'" onblur="this.style.borderColor='var(--bdr)'">
+          <div style="font-size:10px;color:var(--text-secondary);">Satu URL Apps Script bisa digunakan untuk kedua folder (Penjualan &amp; Target).</div>
+        </div>
+
+        <!-- ── Folder IDs ── -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px;">
+          <div class="gdrive-folder-row" style="flex-direction:column;align-items:flex-start;gap:5px;">
+            <div style="display:flex;align-items:center;gap:6px;width:100%;">
+              <i class="ti ti-folder-filled" style="color:#4285F4;font-size:15px;"></i>
+              <span style="font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;">Folder Penjualan</span>
+              <button style="margin-left:auto;font-size:10px;padding:2px 8px;border:1px solid var(--bdr);border-radius:4px;background:var(--bg-primary);cursor:pointer;color:var(--bbl);" onclick="editFolderId('penjualan')">Edit</button>
+            </div>
+            <div class="folder-id" id="gd-folderid-penjualan" style="font-size:10px;word-break:break-all;">1gJeYLe4XjSfl51k98eFDNuUEzHGuLogD</div>
+          </div>
+          <div class="gdrive-folder-row" style="flex-direction:column;align-items:flex-start;gap:5px;">
+            <div style="display:flex;align-items:center;gap:6px;width:100%;">
+              <i class="ti ti-folder-filled" style="color:#0F9D58;font-size:15px;"></i>
+              <span style="font-size:10px;font-weight:600;color:var(--text-secondary);text-transform:uppercase;">Folder Target</span>
+              <button style="margin-left:auto;font-size:10px;padding:2px 8px;border:1px solid var(--bdr);border-radius:4px;background:var(--bg-primary);cursor:pointer;color:var(--bbl);" onclick="editFolderId('target')">Edit</button>
+            </div>
+            <div class="folder-id" id="gd-folderid-target" style="font-size:10px;word-break:break-all;">1ILvUY0k0msUIDPLiLzIDLfmdWMIl_xjL</div>
+          </div>
+        </div>
+
+        <!-- ── Action buttons ── -->
+        <div style="display:flex;gap:8px;margin-bottom:12px;">
+          <button class="btn-gdrive" id="btn-gdrive-load" onclick="loadFromGDrive()">
+            <i class="ti ti-refresh" style="font-size:13px;"></i> Muat Semua File dari Drive
+          </button>
+          <button style="font-size:11px;padding:8px 14px;border:1px solid var(--bdr);border-radius:8px;background:var(--bg-secondary);cursor:pointer;color:var(--text-secondary);" onclick="clearGDriveData()">
+            <i class="ti ti-trash" style="font-size:11px;"></i> Reset Data
+          </button>
+        </div>
+
+        <!-- Status & file list -->
+        <div id="gd-status-penjualan" class="gdrive-status-box info">
+          <b><i class="ti ti-info-circle"></i> Folder Penjualan</b> — Belum dimuat.
+        </div>
+        <div id="gd-files-penjualan" class="gdrive-file-list"></div>
+
+        <div id="gd-status-target" class="gdrive-status-box info" style="margin-top:10px;">
+          <b><i class="ti ti-info-circle"></i> Folder Target</b> — Belum dimuat.
+        </div>
+        <div id="gd-files-target" class="gdrive-file-list"></div>
+      </div>
+
+      <!-- ══ TAB: UPLOAD MANUAL ══ -->
+      <div class="stab-panel" id="stab-upload">
+
+        <!-- ── UPLOAD TARGET ── -->
+        <div class="settings-section">
+          <div class="settings-section-title"><i class="ti ti-target" style="font-size:14px;"></i> Upload File Target</div>
+          <label class="upload-card" id="card-target" for="file-target">
+            <i class="ti ti-file-spreadsheet"></i>
+            <div class="upload-card-title">Klik untuk upload file Target (.xlsx)</div>
+            <div class="upload-card-sub">Format kolom sesuai template target</div>
+            <input type="file" id="file-target" accept=".xlsx,.xls" onchange="handleUpload(this,'target')">
+          </label>
+          <div class="upload-status" id="status-target"></div>
+          <div id="gdrive-save-target-wrap" style="display:none;margin-top:8px;">
+            <button class="btn-gdrive" id="btn-save-target" onclick="saveFileToDrive('target')" style="font-size:11px;padding:7px 14px;background:#0F9D58;border-radius:8px;border:none;display:flex;align-items:center;gap:6px;font-weight:600;color:#fff;cursor:pointer;">
+              <i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive (Folder Target)
+            </button>
+            <div class="gdrive-status-box" id="gdrive-save-status-target" style="margin-top:6px;"></div>
+          </div>
+          <div class="template-info">
+            <strong><i class="ti ti-info-circle"></i> Kolom yang digunakan dari file Target:</strong>
+            <div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;">
+              <span class="col-tag">bulan</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">angka 1–12</span>
+              <span class="col-tag">tahun</span>
+              <span class="col-tag">siteid / nama_site</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ Branch Name</span>
+              <span class="col-tag">brandid / nama_brand</span>
+              <span class="col-tag">salesmanid</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ Salesperson</span>
+              <span class="col-tag">nama_salesman</span>
+              <span class="col-tag">nama_group</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ Product Name</span>
+              <span class="col-tag">target_product</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">(value Rp)</span>
+              <span class="col-tag">target_product_in_dus</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">(qty)</span>
+            </div>
+            <div style="margin-top:8px;color:var(--text-secondary);font-size:10px;">Kolom <b>Rbp</b> bisa diisi manual di tab RBP — target_product_in_dus akan dihitung otomatis (target_product ÷ Rbp).</div>
+          </div>
+        </div>
+
+        <!-- ── UPLOAD PENJUALAN ── -->
+        <div class="settings-section">
+          <div class="settings-section-title"><i class="ti ti-chart-bar" style="font-size:14px;"></i> Upload File Penjualan (Aktual)</div>
+          <label class="upload-card" id="card-penjualan" for="file-penjualan">
+            <i class="ti ti-file-spreadsheet"></i>
+            <div class="upload-card-title">Klik untuk upload file Penjualan (.xlsx)</div>
+            <div class="upload-card-sub">Format kolom sesuai template penjualan</div>
+            <input type="file" id="file-penjualan" accept=".xlsx,.xls" onchange="handleUpload(this,'penjualan')">
+          </label>
+          <div class="upload-status" id="status-penjualan"></div>
+          <div id="gdrive-save-penjualan-wrap" style="display:none;margin-top:8px;">
+            <button class="btn-gdrive" id="btn-save-penjualan" onclick="saveFileToDrive('penjualan')" style="font-size:11px;padding:7px 14px;background:#4285F4;border-radius:8px;border:none;display:flex;align-items:center;gap:6px;font-weight:600;color:#fff;cursor:pointer;">
+              <i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive (Folder Penjualan)
+            </button>
+            <div class="gdrive-status-box" id="gdrive-save-status-penjualan" style="margin-top:6px;"></div>
+          </div>
+          <div class="template-info">
+            <strong><i class="ti ti-info-circle"></i> Kolom yang digunakan dari file Penjualan:</strong>
+            <div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px;">
+              <span class="col-tag">Salesperson</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ salesmanid</span>
+              <span class="col-tag">Invoice Date</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">ekstrak bulan &amp; tahun</span>
+              <span class="col-tag">Branch Name</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ nama_site</span>
+              <span class="col-tag">Brand Reguler Breakdown</span>
+              <span class="col-tag">Product Name Breakdown</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">↔ nama_group</span>
+              <span class="col-tag">Line Incl Ppn</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">(value Rp)</span>
+              <span class="col-tag">Qty In Max Uom Breakdown</span><span style="font-size:10px;color:var(--text-secondary);line-height:1.8;">(dus)</span>
+            </div>
+            <div style="margin-top:8px;color:var(--text-secondary);font-size:10px;">Invoice Date dikenali dalam format DD/MM/YYYY, MM/DD/YYYY, atau YYYY-MM-DD. Data diagregasi per Salesperson × Bulan × Tahun.</div>
+          </div>
+        </div>
+
+        <!-- ── LOG ── -->
+        <div class="settings-section" id="upload-log-section" style="display:none;">
+          <div class="settings-section-title"><i class="ti ti-list-check" style="font-size:14px;"></i> Log Import</div>
+          <div id="upload-log" style="background:var(--bg-secondary);border-radius:10px;padding:12px;font-size:11px;color:var(--text-primary);max-height:160px;overflow-y:auto;font-family:monospace;line-height:1.7;"></div>
+        </div>
+
+      </div>
+
+      <!-- ══ TAB: RBP ══ -->
+      <div class="stab-panel" id="stab-rbp2">
+
+      <!-- ── INPUT RBP MANUAL ── -->
+      <div class="settings-section" id="rbp-section" style="display:none;">
+        <div class="settings-section-title"><i class="ti ti-calculator" style="font-size:14px;"></i> Input Harga RBP (Rbp per Produk)</div>
+        <div style="font-size:11px;color:var(--text-secondary);margin-bottom:10px;">Isi harga RBP untuk setiap produk. Jika diisi, <b>target_product_in_dus</b> dihitung otomatis: <code style="background:var(--bbl2);padding:1px 5px;border-radius:3px;">target_product ÷ Rbp</code></div>
+        <div id="rbp-table-wrap" style="overflow-x:auto;">
+          <table style="width:100%;border-collapse:collapse;font-size:11px;" id="rbp-table">
+            <thead>
+              <tr style="background:var(--bg-secondary);">
+                <th style="padding:7px 8px;text-align:left;font-size:10px;color:var(--text-secondary);border-bottom:1px solid var(--bdr);">Produk (nama_group)</th>
+                <th style="padding:7px 8px;text-align:left;font-size:10px;color:var(--text-secondary);border-bottom:1px solid var(--bdr);">Brand</th>
+                <th style="padding:7px 8px;text-align:right;font-size:10px;color:var(--text-secondary);border-bottom:1px solid var(--bdr);">Harga RBP (Rp/dus)</th>
+              </tr>
+            </thead>
+            <tbody id="rbp-tbody"></tbody>
+          </table>
+        </div>
+        <button class="btn-primary" style="margin-top:10px;padding:8px 16px;font-size:12px;" onclick="applyRBP()">
+          <i class="ti ti-calculator" style="font-size:12px;margin-right:4px;"></i>Hitung &amp; Terapkan Target Dus
+        </button>
+        <div id="rbp-status" style="margin-top:8px;font-size:11px;color:#1B6A2E;display:none;"></div>
+      </div>
+
+      <!-- ── LOG (RBP tab) ── -->
+      <div class="settings-section" id="rbp-log-section" style="display:none;">
+        <div class="settings-section-title"><i class="ti ti-list-check" style="font-size:14px;"></i> Log Terakhir</div>
+        <div id="rbp-log" style="background:var(--bg-secondary);border-radius:10px;padding:12px;font-size:11px;color:var(--text-primary);max-height:120px;overflow-y:auto;font-family:monospace;line-height:1.7;"></div>
+      </div>
+
+      </div><!-- end stab-rbp2 -->
+
+    </div><!-- end settings-body -->
+    <div class="settings-footer" style="display:flex;align-items:center;justify-content:space-between;">
+      <span class="logout-link" onclick="logoutAdmin()"><i class="ti ti-logout" style="font-size:11px;"></i> Keluar dari mode admin</span>
+      <button class="btn-primary" style="min-width:100px;" onclick="closeSetting()">Tutup</button>
+    </div>
+  </div>
 </div>
 
 <div class="kpi-grid">
-  <div class="kpi-card"><div class="kpi-acc" style="background:#1B3F7A;"></div><div class="kpi-lbl">Total Penjualan</div><div class="kpi-val">Rp 4,82M</div><div class="kpi-sub"><span class="bu">▲ 12,4%</span> vs bln lalu</div></div>
-  <div class="kpi-card"><div class="kpi-acc" style="background:#2EAA4A;"></div><div class="kpi-lbl">Pencapaian Target</div><div class="kpi-val">87,6%</div><div class="kpi-sub"><span class="bw">▼ 12,4%</span> di bawah target</div></div>
-  <div class="kpi-card"><div class="kpi-acc" style="background:#E8A020;"></div><div class="kpi-lbl">Target Bulan Ini</div><div class="kpi-val">Rp 5,50M</div><div class="kpi-sub"><span style="color:var(--text-secondary);">Gap: Rp 0,68M</span></div></div>
-  <div class="kpi-card"><div class="kpi-acc" style="background:#2A5BA8;"></div><div class="kpi-lbl">Sales Aktif</div><div class="kpi-val">12</div><div class="kpi-sub"><span class="bu">8 On-track</span></div></div>
+  <div class="kpi-card"><div class="kpi-acc" style="background:#1B3F7A;"></div><div class="kpi-lbl">Total Penjualan</div><div class="kpi-val" id="kpi-total">Rp 4,82M</div><div class="kpi-sub"><span class="bu">▲ 12,4%</span> vs bln lalu</div></div>
+  <div class="kpi-card"><div class="kpi-acc" style="background:#2EAA4A;"></div><div class="kpi-lbl">Pencapaian Target</div><div class="kpi-val" id="kpi-pct">87,6%</div><div class="kpi-sub"><span class="bw">▼ 12,4%</span> di bawah target</div></div>
+  <div class="kpi-card"><div class="kpi-acc" style="background:#E8A020;"></div><div class="kpi-lbl">Target Bulan Ini</div><div class="kpi-val" id="kpi-target">Rp 5,50M</div><div class="kpi-sub"><span style="color:var(--text-secondary);">Gap: <span id="kpi-gap">Rp 0,68M</span></span></div></div>
+  <div class="kpi-card"><div class="kpi-acc" style="background:#2A5BA8;"></div><div class="kpi-lbl">Sales Aktif</div><div class="kpi-val" id="kpi-aktif">12</div><div class="kpi-sub"><span class="bu" id="kpi-ontrack">8 On-track</span></div></div>
 </div>
 
 <div class="charts-row">
@@ -206,14 +560,47 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
     </div>
   </div>
 
+  <!-- FILTER BAR -->
+  <div class="filter-bar">
+    <span class="filter-label"><i class="ti ti-filter" style="font-size:11px;"></i> Filter:</span>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <span style="font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;">Cabang/Depo</span>
+      <select class="filter-select" id="filter-cabang" onchange="applyFilters()">
+        <option value="">Semua Cabang/Depo</option>
+      </select>
+    </div>
+    <div class="filter-sep"></div>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <span style="font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;">Brand Produk</span>
+      <select class="filter-select" id="filter-brand" onchange="onBrandChange()">
+        <option value="">Semua Brand</option>
+      </select>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <span style="font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;">Nama Produk</span>
+      <select class="filter-select" id="filter-produk" onchange="applyFilters()" disabled>
+        <option value="">Semua Produk</option>
+      </select>
+    </div>
+    <div class="filter-sep"></div>
+    <div style="display:flex;flex-direction:column;gap:2px;margin-left:auto;">
+      <span style="font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.3px;">Tampilkan Nilai</span>
+      <div class="unit-toggle">
+        <button class="utab active" id="btn-value" onclick="setUnit('value',this)">In Value (Rp)</button>
+        <button class="utab" id="btn-dus" onclick="setUnit('dus',this)">In Dus (Qty)</button>
+      </div>
+    </div>
+  </div>
+
   <div id="view-mtd">
     <div class="tbl-wrap">
     <table class="tbl">
       <thead><tr>
         <th style="width:90px;">Kode Sales</th>
-        <th style="width:120px;">Cabang/Depo</th>
-        <th style="width:95px;">Penjualan MTD</th>
-        <th style="width:85px;">Target</th>
+        <th style="width:130px;">Cabang/Depo</th>
+        <th style="width:115px;">Penjualan MTD</th>
+        <th style="width:100px;">Target</th>
+        <th style="width:100px;">Gap (Kekurangan)</th>
         <th style="width:110px;">Pencapaian</th>
         <th style="width:80px;">Status</th>
       </tr></thead>
@@ -223,14 +610,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
   </div>
 
   <div id="view-hist" style="display:none;">
-    <div class="yr-select-row">
-      <span style="font-size:11px;color:var(--text-secondary);">Tahun:</span>
-      <span class="yr-tag active" onclick="setYear('2024',this)">2024</span>
-      <span class="yr-tag" onclick="setYear('2025',this)">2025</span>
-      <span class="yr-tag" onclick="setYear('2026',this)">2026</span>
-    </div>
-
-    <div id="hist-summary" class="summ-bar"></div>
 
     <div class="cell-legend">
       <span style="font-size:10px;font-weight:500;color:var(--text-secondary);margin-right:2px;">Warna sel:</span>
@@ -240,11 +619,12 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
       <span class="cli"><span class="cls" style="background:rgba(226,75,74,0.10);border:0.5px solid rgba(226,75,74,0.25);"></span>&lt; 75%</span>
     </div>
 
+    <!-- ONE unified table, all years horizontal -->
     <div class="tbl-wrap">
-    <table class="tbl" id="hist-tbl">
-      <thead><tr id="hist-thead"></tr></thead>
-      <tbody id="hist-tbody"></tbody>
-    </table>
+      <table class="tbl" id="hist-unified-tbl" style="table-layout:auto;">
+        <thead id="hist-unified-thead"></thead>
+        <tbody id="hist-unified-tbody"></tbody>
+      </table>
     </div>
 
     <div id="hist-chart-wrap" style="margin-top:14px;display:none;">
@@ -259,295 +639,88 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg-secondary);
 
 </div><!-- end dashboard -->
 
-<!-- ═══════════════════════════════════════
-     MODAL PENGATURAN – UPLOAD XLSX
-═══════════════════════════════════════ -->
-<div class="modal-overlay" id="settingsModal">
-  <div class="modal-box">
-
-    <div class="modal-header">
-      <div class="modal-title">
-        <i class="ti ti-settings" style="font-size:16px;"></i>
-        Pengaturan – Import Data
-      </div>
-      <button class="modal-close" onclick="closeSettings()">✕</button>
-    </div>
-
-    <div class="modal-body">
-
-      <!-- UPLOAD TARGET -->
-      <div class="upload-section">
-        <div class="upload-sec-hdr">
-          <div class="upload-sec-icon blue"><i class="ti ti-target"></i></div>
-          <div class="upload-sec-info">
-            <div class="upload-sec-title">Upload Target Penjualan</div>
-            <div class="upload-sec-sub">Format .xlsx · Kolom: Kode Sales, Cabang, Jan–Des, Tahun</div>
-          </div>
-          <a class="dl-tpl" href="#" onclick="downloadTemplate('target');return false;">
-            <i class="ti ti-download" style="font-size:12px;"></i> Unduh Template
-          </a>
-        </div>
-        <div class="upload-body">
-          <div class="drop-zone" id="dz-target"
-               ondragover="dzDragOver(event,'dz-target')"
-               ondragleave="dzDragLeave('dz-target')"
-               ondrop="dzDrop(event,'target')">
-            <input type="file" accept=".xlsx,.xls" id="file-target" onchange="fileChosen('target')">
-            <div class="drop-icon"><i class="ti ti-file-spreadsheet"></i></div>
-            <div class="drop-txt">Klik atau seret file .xlsx ke sini</div>
-            <div class="drop-sub">Maksimal 5 MB</div>
-          </div>
-          <div class="file-info" id="fi-target">
-            <i class="ti ti-file-check" style="color:#1B6A2E;font-size:16px;flex-shrink:0;"></i>
-            <span class="file-info-name" id="fi-target-name"></span>
-            <span class="file-info-size" id="fi-target-size"></span>
-            <button class="btn-clear-file" onclick="clearFile('target')" title="Hapus file">✕</button>
-          </div>
-          <div class="upload-status" id="us-target"></div>
-        </div>
-      </div>
-
-      <!-- UPLOAD PENJUALAN -->
-      <div class="upload-section">
-        <div class="upload-sec-hdr">
-          <div class="upload-sec-icon green"><i class="ti ti-chart-bar"></i></div>
-          <div class="upload-sec-info">
-            <div class="upload-sec-title">Upload Data Penjualan</div>
-            <div class="upload-sec-sub">Format .xlsx · Kolom: Kode Sales, Cabang, Bulan, Tahun, Nominal (Rp jt)</div>
-          </div>
-          <a class="dl-tpl" href="#" onclick="downloadTemplate('penjualan');return false;">
-            <i class="ti ti-download" style="font-size:12px;"></i> Unduh Template
-          </a>
-        </div>
-        <div class="upload-body">
-          <div class="drop-zone" id="dz-penjualan"
-               ondragover="dzDragOver(event,'dz-penjualan')"
-               ondragleave="dzDragLeave('dz-penjualan')"
-               ondrop="dzDrop(event,'penjualan')">
-            <input type="file" accept=".xlsx,.xls" id="file-penjualan" onchange="fileChosen('penjualan')">
-            <div class="drop-icon"><i class="ti ti-file-spreadsheet"></i></div>
-            <div class="drop-txt">Klik atau seret file .xlsx ke sini</div>
-            <div class="drop-sub">Maksimal 20 MB</div>
-          </div>
-          <div class="file-info" id="fi-penjualan">
-            <i class="ti ti-file-check" style="color:#1B6A2E;font-size:16px;flex-shrink:0;"></i>
-            <span class="file-info-name" id="fi-penjualan-name"></span>
-            <span class="file-info-size" id="fi-penjualan-size"></span>
-            <button class="btn-clear-file" onclick="clearFile('penjualan')" title="Hapus file">✕</button>
-          </div>
-          <div class="upload-status" id="us-penjualan"></div>
-        </div>
-      </div>
-
-    </div><!-- /modal-body -->
-
-    <div class="modal-footer">
-      <div class="footer-hint">
-        <strong>Catatan:</strong> Data yang diupload akan menggantikan data yang ada di dashboard.<br>
-        Pastikan format kolom sesuai template.
-      </div>
-      <button class="btn-process" id="btn-process" onclick="processUpload()">
-        <i class="ti ti-database-import"></i> Proses &amp; Terapkan
-      </button>
-    </div>
-
-  </div>
-</div>
-
-<!-- TOAST -->
-<div class="toast" id="toast"><i class="ti ti-check" id="toast-icon"></i> <span id="toast-msg"></span></div>
-
-
-
-<script>
-// ═══════════════════════════════════════════════════════
-// KONFIGURASI GOOGLE SHEETS & SISTEM ADMIN
-// ═══════════════════════════════════════════════════════
-
-// Ganti dengan URL Apps Script Web App Anda
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx710QFDUJiO71qM42zgCCWHTaUVPEI-eM8e9gg--27waiHEPbSmJXxE-wtQIHqyS3I/exec';
-
-// Password admin (ganti sesuai kebutuhan, atau gunakan sistem login yang lebih aman)
-const ADMIN_PASSWORD = 'admin2026';
-
-let isAdmin = false;
-let sessionChecked = false;
-
-// Cek session admin dari sessionStorage
-function checkAdminSession() {
-  isAdmin = sessionStorage.getItem('isAdmin') === 'true';
-  sessionChecked = true;
-  updateUIForRole();
-}
-
-function updateUIForRole() {
-  // Sembunyikan/tampilkan tombol pengaturan berdasarkan role
-  const btnSetting = document.querySelector('.btn-setting');
-  if (btnSetting) {
-    btnSetting.style.display = isAdmin ? 'flex' : 'none';
-  }
-  // Tambahkan badge role di top bar
-  const pbadge = document.querySelector('.pbadge');
-  if (pbadge && !document.getElementById('role-badge')) {
-    const badge = document.createElement('span');
-    badge.id = 'role-badge';
-    badge.style.cssText = 'background:rgba(255,255,255,0.12);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.85);cursor:pointer;';
-    badge.innerHTML = isAdmin
-      ? '<i class="ti ti-shield-check" style="margin-right:4px;color:#2EAA4A;"></i> Admin'
-      : '<i class="ti ti-eye" style="margin-right:4px;color:rgba(255,255,255,0.6);"></i> Viewer';
-    badge.onclick = isAdmin ? doLogout : openLoginModal;
-    pbadge.parentNode.insertBefore(badge, pbadge.nextSibling);
-  } else if (document.getElementById('role-badge')) {
-    const badge = document.getElementById('role-badge');
-    badge.innerHTML = isAdmin
-      ? '<i class="ti ti-shield-check" style="margin-right:4px;color:#2EAA4A;"></i> Admin'
-      : '<i class="ti ti-eye" style="margin-right:4px;color:rgba(255,255,255,0.6);"></i> Viewer';
-    badge.onclick = isAdmin ? doLogout : openLoginModal;
-  }
-}
-
-function openLoginModal() {
-  document.getElementById('loginModal').classList.add('open');
-  setTimeout(() => document.getElementById('login-pw').focus(), 100);
-}
-
-function closeLoginModal() {
-  document.getElementById('loginModal').classList.remove('open');
-  document.getElementById('login-pw').value = '';
-  document.getElementById('login-error').textContent = '';
-}
-
-function doLogin() {
-  const pw = document.getElementById('login-pw').value;
-  if (pw === ADMIN_PASSWORD) {
-    isAdmin = true;
-    sessionStorage.setItem('isAdmin', 'true');
-    closeLoginModal();
-    updateUIForRole();
-    showToast('Login admin berhasil!');
-  } else {
-    document.getElementById('login-error').textContent = 'Password salah. Coba lagi.';
-    document.getElementById('login-pw').value = '';
-    document.getElementById('login-pw').focus();
-  }
-}
-
-function doLogout() {
-  isAdmin = false;
-  sessionStorage.removeItem('isAdmin');
-  updateUIForRole();
-  showToast('Logout berhasil.');
-}
-
-// ═══════════════════════════════════════════════════════
-// GOOGLE SHEETS INTEGRATION
-// ═══════════════════════════════════════════════════════
-
-// Load data dari Google Sheets saat halaman dimuat
-async function loadDataFromSheets() {
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_SCRIPT_ID')) return;
-  try {
-    showLoadingOverlay(true);
-    const res = await fetch(APPS_SCRIPT_URL + '?action=getData', { method: 'GET' });
-    const json = await res.json();
-    if (json.success && json.data) {
-      applySheetData(json.data);
-      showToast('Data berhasil dimuat dari Google Sheets.');
-    }
-  } catch (e) {
-    console.warn('Gagal load dari Sheets:', e);
-  } finally {
-    showLoadingOverlay(false);
-  }
-}
-
-function showLoadingOverlay(show) {
-  let el = document.getElementById('loading-overlay');
-  if (!el && show) {
-    el = document.createElement('div');
-    el.id = 'loading-overlay';
-    el.style.cssText = 'position:fixed;inset:0;background:rgba(27,63,122,0.15);backdrop-filter:blur(2px);z-index:999;display:flex;align-items:center;justify-content:center;';
-    el.innerHTML = '<div style="background:#fff;border-radius:12px;padding:20px 32px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 32px rgba(0,0,0,0.15);"><i class="ti ti-loader ti-spin" style="font-size:22px;color:#1B3F7A;"></i><span style="font-size:13px;font-weight:500;color:#1a2540;">Memuat data...</span></div>';
-    document.body.appendChild(el);
-  }
-  if (el) el.style.display = show ? 'flex' : 'none';
-}
-
-// Upload data ke Google Sheets (hanya admin)
-async function uploadToSheets(type, rows) {
-  if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes('YOUR_SCRIPT_ID')) return { success: false, msg: 'URL Apps Script belum dikonfigurasi.' };
-  try {
-    const res = await fetch(APPS_SCRIPT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ action: 'saveData', type: type, rows: rows })
-    });
-    return await res.json();
-  } catch (e) {
-    return { success: false, msg: e.message };
-  }
-}
-
-// Apply data dari Sheets ke dashboard
-function applySheetData(data) {
-  if (data.target) {
-    const result = applyTargetData(data.target);
-    console.log('Target dari Sheets:', result);
-  }
-  if (data.penjualan) {
-    const result = applyPenjualanData(data.penjualan);
-    console.log('Penjualan dari Sheets:', result);
-  }
-  if ((data.target && data.target.length) || (data.penjualan && data.penjualan.length)) {
-    dataLoaded = true;
-    renderMTD();
-    renderHistSummary(activeYear);
-    renderHistTable(activeYear);
-  }
-}
-</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script>
-// Load SheetJS with multiple CDN fallbacks — prefer newer versions first
-(function() {
-  var cdns = [
-    "https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js",
-    "https://cdn.jsdelivr.net/npm/xlsx@0.20.3/dist/xlsx.full.min.js",
-    "https://unpkg.com/xlsx@0.20.3/dist/xlsx.full.min.js",
-    "https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js",
-    "https://unpkg.com/xlsx@0.19.3/dist/xlsx.full.min.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
-  ];
-  var idx = 0;
-  function tryLoad() {
-    if (idx >= cdns.length) {
-      console.error("Gagal memuat library XLSX dari semua CDN.");
-      document.dispatchEvent(new Event('xlsxLoadFailed'));
-      return;
-    }
-    var url = cdns[idx]; idx++;
-    var s = document.createElement("script");
-    s.src = url;
-    s.onload = function() {
-      console.log("XLSX v" + (typeof XLSX !== 'undefined' ? XLSX.version : '?') + " dimuat dari: " + url);
-      document.dispatchEvent(new Event('xlsxReady'));
-    };
-    s.onerror = function() { console.warn("Gagal: " + url + ", mencoba berikutnya..."); tryLoad(); };
-    document.head.appendChild(s);
-  }
-  tryLoad();
-})();
-</script>
 <script>
 const MONTHS=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
 const CUR_MONTH=4;
-const SALES=[];
-let dataLoaded=false; // flag: true setelah data berhasil diupload
+
+// ── DATA MASTER ──
+const BRANCHES=['Depo Jakarta Utara','Cabang Bekasi','Depo Bogor','Cabang Tangerang','Depo Depok','Cabang Jkt Selatan'];
+
+const BRANDS={
+  'Alfa':['Alfa Premium','Alfa Regular','Alfa Lite','Alfa Max'],
+  'Beta':['Beta Gold','Beta Silver','Beta Bronze'],
+  'Gama':['Gama Fresh','Gama Classic','Gama Ultra']
+};
+
+const SALES=[
+  {code:'SLS-001',branch:'Depo Jakarta Utara',brand:'Alfa',produk:'Alfa Premium'},
+  {code:'SLS-002',branch:'Cabang Bekasi',brand:'Alfa',produk:'Alfa Regular'},
+  {code:'SLS-003',branch:'Depo Bogor',brand:'Beta',produk:'Beta Gold'},
+  {code:'SLS-004',branch:'Cabang Tangerang',brand:'Beta',produk:'Beta Silver'},
+  {code:'SLS-005',branch:'Depo Depok',brand:'Gama',produk:'Gama Fresh'},
+  {code:'SLS-006',branch:'Cabang Jkt Selatan',brand:'Gama',produk:'Gama Classic'},
+  {code:'SLS-007',branch:'Depo Jakarta Utara',brand:'Alfa',produk:'Alfa Lite'},
+  {code:'SLS-008',branch:'Cabang Bekasi',brand:'Beta',produk:'Beta Bronze'},
+  {code:'SLS-009',branch:'Depo Bogor',brand:'Gama',produk:'Gama Ultra'},
+  {code:'SLS-010',branch:'Cabang Tangerang',brand:'Alfa',produk:'Alfa Max'},
+  {code:'SLS-011',branch:'Depo Depok',brand:'Beta',produk:'Beta Gold'},
+  {code:'SLS-012',branch:'Cabang Jkt Selatan',brand:'Gama',produk:'Gama Classic'},
+];
+
+// ── STATE ──
+let activeYear='2024';
+let activeUnit='value'; // 'value' or 'dus'
+let filterCabang='';
+let filterBrand='';
+let filterProduk='';
+let histLineChart=null;
+
+// ── SEED DATA ──
+function seed(n){const x=Math.sin(n)*10000;return x-Math.floor(x);}
+function srnd(s,min,max){return Math.round((seed(s)*(max-min)+min)*1000)/1000;}
+
 const HIST={};
-function fmtVal(v){if(v==null)return'—';if(v>=1){return(Math.round(v*100)/100).toFixed(2)+'M';}return Math.round(v*1000)+'jt';}
-function fmtRp(v){if(v==null)return'—';if(v>=1)return'Rp '+(Math.round(v*100)/100).toFixed(2)+'M';return'Rp '+Math.round(v*1000)+'jt';}
+SALES.forEach((s,si)=>{
+  const base=0.72+si*0.05;
+  HIST[s.code]={};
+  [2024,2025,2026].forEach(yr=>{
+    HIST[s.code][yr]=MONTHS.map((_,mi)=>{
+      const sk=si*1000+yr*10+mi;
+      const tVal=parseFloat((base+srnd(sk+1,0.05,0.18)).toFixed(3));
+      const aVal=mi<=CUR_MONTH||yr<2026?parseFloat((tVal*srnd(sk+2,0.80,1.18)).toFixed(3)):null;
+      // Qty in dus (multiply by ~1200 dus/M, vary slightly per product)
+      const dusFactor=800+si*80;
+      const tDus=Math.round(tVal*dusFactor);
+      const aDus=aVal!=null?Math.round(aVal*dusFactor):null;
+      return {actual:aVal,target:tVal,actualDus:aDus,targetDus:tDus};
+    });
+  });
+});
+
+// ── FORMAT HELPERS ──
+function fmtVal(v){
+  if(v==null)return'—';
+  if(activeUnit==='dus')return v!=null?v.toLocaleString('id-ID')+' dus':'—';
+  if(v>=1)return(Math.round(v*100)/100).toFixed(2)+'M';
+  return Math.round(v*1000)+'jt';
+}
+function fmtValRaw(v){
+  if(v==null)return'—';
+  if(activeUnit==='dus')return v.toLocaleString('id-ID')+' dus';
+  if(v>=1)return'Rp '+(Math.round(v*100)/100).toFixed(2)+'M';
+  return'Rp '+Math.round(v*1000)+'jt';
+}
+function fmtRp(v){
+  if(v==null)return'—';
+  if(activeUnit==='dus')return v.toLocaleString('id-ID')+' dus';
+  if(v>=1)return'Rp '+(Math.round(v*100)/100).toFixed(2)+'M';
+  return'Rp '+Math.round(v*1000)+'jt';
+}
+function getActual(m){return activeUnit==='dus'?m.actualDus:m.actual;}
+function getTarget(m){return activeUnit==='dus'?m.targetDus:m.target;}
 function pct(a,t){return a==null||!t?null:Math.round(a/t*100);}
+
 function pillHtml(p){
   if(p==null)return'<span class="pill" style="background:var(--bg-secondary);color:var(--text-secondary);">—</span>';
   if(p>=100)return'<span class="pill pill-on">On Target</span>';
@@ -558,7 +731,7 @@ function pillHtml(p){
 function barHtml(p,w){
   if(p==null)return'';
   const c=p>=100?'#2EAA4A':p>=90?'#1B3F7A':p>=75?'#E8A020':'#E24B4A';
-  return`<span class="pw" style="width:${w||55}px;"><span class="pb" style="width:${Math.min(p,100)}%;background:${c};"></span></span> `;
+  return'<span class="pw" style="width:'+( w||55)+'px;"><span class="pb" style="width:'+Math.min(p,100)+'%;background:'+c+';"></span></span> ';
 }
 function cellBg(p){
   if(p==null)return'';
@@ -570,145 +743,297 @@ function cellBg(p){
 function pctColor(p){
   if(p>=100)return'#1B6A2E';if(p>=90)return'#0C447C';if(p>=75)return'#6A4A10';return'#8A2020';
 }
+
+// ── FILTER LOGIC ──
+function getFilteredSales(){
+  return SALES.filter(s=>{
+    if(filterCabang && s.branch!==filterCabang)return false;
+    if(filterBrand && s.brand!==filterBrand)return false;
+    if(filterProduk && s.produk!==filterProduk)return false;
+    return true;
+  });
+}
+
+function populateFilters(){
+  // Cabang
+  const cabSel=document.getElementById('filter-cabang');
+  cabSel.innerHTML='<option value="">Semua Cabang/Depo</option>';
+  [...new Set(SALES.map(s=>s.branch))].forEach(b=>{
+    const o=document.createElement('option');o.value=b;o.textContent=b;cabSel.appendChild(o);
+  });
+
+  // Brand
+  const brandSel=document.getElementById('filter-brand');
+  brandSel.innerHTML='<option value="">Semua Brand</option>';
+  Object.keys(BRANDS).forEach(b=>{
+    const o=document.createElement('option');o.value=b;o.textContent=b;brandSel.appendChild(o);
+  });
+}
+
+function onBrandChange(){
+  filterBrand=document.getElementById('filter-brand').value;
+  filterProduk='';
+  const prodSel=document.getElementById('filter-produk');
+  prodSel.innerHTML='<option value="">Semua Produk</option>';
+  if(filterBrand){
+    prodSel.disabled=false;
+    (BRANDS[filterBrand]||[]).forEach(p=>{
+      const o=document.createElement('option');o.value=p;o.textContent=p;prodSel.appendChild(o);
+    });
+  } else {
+    prodSel.disabled=true;
+  }
+  applyFilters();
+}
+
+function applyFilters(){
+  filterCabang=document.getElementById('filter-cabang').value;
+  filterBrand=document.getElementById('filter-brand').value;
+  filterProduk=document.getElementById('filter-produk').value;
+  renderMTD();
+  renderAllYears();
+}
+
+// ── UNIT TOGGLE ──
+function setUnit(u,btn){
+  activeUnit=u;
+  document.querySelectorAll('.utab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMTD();
+  renderAllYears();
+  updateKPI();
+}
+
+// ── KPI UPDATE ──
+function updateKPI(){
+  const filtered=getFilteredSales();
+  let totA=0,totT=0,ontrack=0;
+  filtered.forEach(s=>{
+    const m=HIST[s.code][2026][CUR_MONTH];
+    const a=getActual(m),t=getTarget(m);
+    if(a!=null)totA+=a;
+    if(t!=null)totT+=t;
+    const p=pct(a,t);
+    if(p!=null&&p>=90)ontrack++;
+  });
+  const pctVal=totT?Math.round(totA/totT*100):0;
+  const gap=totT-totA;
+
+  document.getElementById('kpi-total').textContent=fmtRp(totA||null);
+  document.getElementById('kpi-pct').textContent=totT?pctVal+'%':'—';
+  document.getElementById('kpi-target').textContent=fmtRp(totT||null);
+  document.getElementById('kpi-gap').textContent=gap>0?fmtRp(gap):'Tercapai';
+  document.getElementById('kpi-aktif').textContent=filtered.length;
+  document.getElementById('kpi-ontrack').textContent=ontrack+' On-track';
+}
+
+// ── MTD RENDER ──
 function renderMTD(){
-  if(!dataLoaded||SALES.length===0){
-    document.getElementById('mtd-tbody').innerHTML=
-      `<tr><td colspan="6" style="text-align:center;padding:32px 16px;">
-        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;color:var(--text-secondary);">
-          <i class="ti ti-table-import" style="font-size:32px;opacity:0.4;"></i>
-          <div style="font-size:12px;font-weight:500;">Belum ada data</div>
-          <div style="font-size:11px;opacity:0.7;">Upload file Target &amp; Penjualan melalui tombol <strong style="color:var(--bbl);">⚙ Pengaturan</strong> untuk menampilkan performa sales.</div>
-        </div>
-      </td></tr>`;
+  const filtered=getFilteredSales();
+  const tbody=document.getElementById('mtd-tbody');
+  if(!filtered.length){
+    tbody.innerHTML='<tr class="no-data-row"><td colspan="7">Tidak ada data sesuai filter yang dipilih.</td></tr>';
     return;
   }
-  document.getElementById('mtd-tbody').innerHTML=SALES.map(s=>{
-    const d=HIST[s.code][2026][CUR_MONTH];
-    const p=pct(d.actual,d.target);
-    return`<tr>
-      <td><span class="sales-code">${s.code}</span></td>
-      <td style="color:var(--text-secondary);font-size:11px;">${s.branch}</td>
-      <td style="font-weight:600;">${fmtRp(d.actual)}</td>
-      <td style="color:var(--text-secondary);">${fmtRp(d.target)}</td>
-      <td>${barHtml(p,60)}${p!=null?p+'%':'—'}</td>
-      <td>${pillHtml(p)}</td>
-    </tr>`;
+  tbody.innerHTML=filtered.map(s=>{
+    const m=HIST[s.code][2026][CUR_MONTH];
+    const a=getActual(m),t=getTarget(m);
+    const p=pct(a,t);
+    return'<tr>'+
+      '<td><span class="sales-code">'+s.code+'</span></td>'+
+      '<td style="color:var(--text-secondary);font-size:11px;">'+s.branch+'</td>'+
+      '<td style="font-weight:600;">'+fmtRp(a)+'</td>'+
+      '<td style="color:var(--text-secondary);">'+fmtRp(t)+'</td>'+
+      '<td style="font-size:11px;color:'+(a!=null&&t!=null&&t>a?'#8A2020':'#1B6A2E')+';font-weight:500;">'+(a!=null&&t!=null?(t>a?'▼ '+fmtVal(t-a)+' kurang':'✓ Tercapai'):'—')+'</td>'+
+      '<td>'+barHtml(p,60)+(p!=null?p+'%':'—')+'</td>'+
+      '<td>'+pillHtml(p)+'</td>'+
+    '</tr>';
   }).join('');
+  updateKPI();
 }
-let activeYear='2024';let histLineChart=null;
+
+// ── HIST SUMMARY CALC ──
 function calcSummary(yr){
-  const yrn=parseInt(yr);let totA=0,totT=0,cnt=0,prevA=0;
-  SALES.forEach(s=>{
-    HIST[s.code][yrn].forEach(m=>{if(m.actual!=null){totA+=m.actual;cnt++;}totT+=m.target;});
-    if(yrn>2024)HIST[s.code][yrn-1].forEach(m=>{if(m.actual!=null)prevA+=m.actual;});
+  const yrn=parseInt(yr);
+  const filtered=getFilteredSales();
+  let totA=0,totT=0,cnt=0,prevA=0;
+  filtered.forEach(s=>{
+    HIST[s.code][yrn].forEach(m=>{
+      const a=getActual(m),t=getTarget(m);
+      if(a!=null){totA+=a;cnt++;}
+      if(t!=null)totT+=t;
+    });
+    if(yrn>2024)HIST[s.code][yrn-1].forEach(m=>{const a=getActual(m);if(a!=null)prevA+=a;});
   });
   const avg=cnt?totA/cnt:0;
   const growth=prevA?(Math.round((totA-prevA)/prevA*100)):null;
-  const mtdA=SALES.reduce((a,s)=>{const m=HIST[s.code][yrn][CUR_MONTH];return a+(m&&m.actual?m.actual:0);},0);
-  return{totA,avg,growth,mtdA};
+  const mtdA=filtered.reduce((a,s)=>{const m=HIST[s.code][yrn][CUR_MONTH];return a+(getActual(m)||0);},0);
+  return{totA,totT,avg,growth,mtdA};
 }
-function renderHistSummary(yr){
-  if(!dataLoaded||SALES.length===0){
-    document.getElementById('hist-summary').innerHTML=`
-      <div class="summ-cell"><div class="summ-lbl">Full Year Total</div><div class="summ-val" style="color:var(--text-secondary);">—</div></div>
-      <div class="summ-cell"><div class="summ-lbl">Rata-rata / Bln</div><div class="summ-val" style="color:var(--text-secondary);">—</div></div>
-      <div class="summ-cell"><div class="summ-lbl">Growth YoY</div><div class="summ-val" style="color:var(--text-secondary);">—</div></div>
-      <div class="summ-cell"><div class="summ-lbl">MTD (Mei)</div><div class="summ-val" style="color:var(--text-secondary);">—</div></div>`;
-    return;
-  }
-  const s=calcSummary(yr);
-  const gg=s.growth!=null
-    ?`<span style="font-size:11px;color:${s.growth>=0?'#1B6A2E':'#8A2020'};">${s.growth>=0?'▲':'▼'} ${Math.abs(s.growth)}% vs thn lalu</span>`
-    :'<span style="font-size:11px;color:var(--text-secondary);">Tahun dasar</span>';
-  document.getElementById('hist-summary').innerHTML=`
-    <div class="summ-cell"><div class="summ-lbl">Full Year Total</div><div class="summ-val">${fmtRp(s.totA)}</div></div>
-    <div class="summ-cell"><div class="summ-lbl">Rata-rata / Bln</div><div class="summ-val">${fmtRp(s.avg)}</div></div>
-    <div class="summ-cell"><div class="summ-lbl">Growth YoY</div><div class="summ-val">${gg}</div></div>
-    <div class="summ-cell"><div class="summ-lbl">MTD (Mei)</div><div class="summ-val">${fmtRp(s.mtdA)}</div></div>`;
+
+function buildMonthCell(data,i){
+  const m=data[i];
+  const a=getActual(m),t=getTarget(m);
+  const p=pct(a,t);
+  const bg=cellBg(p);
+  if(a==null)return'<td style="text-align:center;color:var(--text-secondary);font-size:9px;padding:4px 3px;min-width:65px;">—</td>';
+  const gap2=t-a;
+  return'<td style="'+bg+'padding:4px 5px;min-width:65px;">'+
+    '<div style="font-size:10px;font-weight:600;color:var(--text-primary);white-space:nowrap;line-height:1.3;">'+fmtVal(a)+'</div>'+
+    '<div style="font-size:9px;color:var(--text-secondary);white-space:nowrap;line-height:1.3;">'+fmtVal(t)+'</div>'+
+    '<div style="font-size:8px;font-weight:500;color:'+(gap2>0?'#8A2020':'#1B6A2E')+';white-space:nowrap;line-height:1.3;">'+(gap2>0?'▼ '+fmtVal(gap2):'✓')+'</div>'+
+    '<div style="font-size:8px;font-weight:500;color:'+pctColor(p)+';line-height:1.3;">'+p+'%</div>'+
+  '</td>';
 }
-function renderHistTable(yr){
-  const yrn=parseInt(yr);
-  const maxM=yrn===2026?CUR_MONTH:11;
-  const visMo=MONTHS.slice(0,maxM+1);
-  document.getElementById('hist-thead').innerHTML=
-    `<th style="width:88px;">Kode Sales</th><th style="width:105px;">Cabang/Depo</th><th style="width:105px;">Keterangan</th>`
-    +visMo.map(m=>`<th style="width:74px;text-align:center;">${m}</th>`).join('')
-    +`<th style="width:72px;">Total</th><th style="width:68px;">Avg/Bln</th><th style="width:65px;">Growth</th>`;
-  if(!dataLoaded||SALES.length===0){
-    const colSpan=3+visMo.length+3;
+
+function renderAllYears(){
+  const filtered=getFilteredSales();
+  const MO24=MONTHS;
+  const MO25=MONTHS;
+  const MO26=MONTHS.slice(0,CUR_MONTH+1);
+
+  // ── THEAD row1: year group headers ──
+  let th1='<tr>';
+  th1+='<th rowspan="2" style="min-width:80px;position:sticky;left:0;z-index:3;background:var(--bg-secondary);">Kode Sales</th>';
+  th1+='<th rowspan="2" style="min-width:105px;position:sticky;left:80px;z-index:3;background:var(--bg-secondary);">Cabang/Depo</th>';
+  th1+='<th rowspan="2" style="min-width:80px;">Keterangan</th>';
+  th1+='<th colspan="'+(MO24.length+4)+'" style="text-align:center;background:rgba(27,63,122,0.08);border-left:2px solid #1B3F7A;border-bottom:1px solid rgba(27,63,122,0.2);font-size:11px;font-weight:700;color:#1B3F7A;padding:5px 0;">2024 — Full Year</th>';
+  th1+='<th colspan="'+(MO25.length+4)+'" style="text-align:center;background:rgba(42,91,168,0.08);border-left:2px solid #2A5BA8;border-bottom:1px solid rgba(42,91,168,0.2);font-size:11px;font-weight:700;color:#2A5BA8;padding:5px 0;">2025 — Full Year</th>';
+  th1+='<th colspan="'+(MO26.length+5)+'" style="text-align:center;background:rgba(46,170,74,0.08);border-left:2px solid #2EAA4A;border-bottom:1px solid rgba(46,170,74,0.2);font-size:11px;font-weight:700;color:#1B6A2E;padding:5px 0;">2026 — Year to Date</th>';
+  th1+='</tr>';
+
+  // ── THEAD row2: month + summary col names ──
+  let th2='<tr>';
+  const bL24='border-left:2px solid #1B3F7A;';
+  const bL25='border-left:2px solid #2A5BA8;';
+  const bL26='border-left:2px solid #2EAA4A;';
+  MO24.forEach((m,i)=>{ th2+='<th style="text-align:center;min-width:65px;'+(i===0?bL24:'')+'">'+m+'</th>'; });
+  th2+='<th style="min-width:72px;background:rgba(27,63,122,0.05);">Total 2024</th>';
+  th2+='<th style="min-width:65px;background:rgba(27,63,122,0.05);">Target YTE</th>';
+  th2+='<th style="min-width:58px;background:rgba(27,63,122,0.05);">Avg/Bln</th>';
+  th2+='<th style="min-width:62px;background:rgba(27,63,122,0.05);">GAP</th>';
+  MO25.forEach((m,i)=>{ th2+='<th style="text-align:center;min-width:65px;'+(i===0?bL25:'')+'">'+m+'</th>'; });
+  th2+='<th style="min-width:72px;background:rgba(42,91,168,0.05);">Total 2025</th>';
+  th2+='<th style="min-width:65px;background:rgba(42,91,168,0.05);">Target YTE</th>';
+  th2+='<th style="min-width:58px;background:rgba(42,91,168,0.05);">Avg/Bln</th>';
+  th2+='<th style="min-width:75px;background:rgba(42,91,168,0.05);">Growth vs 2024</th>';
+  MO26.forEach((m,i)=>{ th2+='<th style="text-align:center;min-width:65px;'+(i===0?bL26:'')+'">'+m+'</th>'; });
+  th2+='<th style="min-width:72px;background:rgba(46,170,74,0.05);">MTD Total</th>';
+  th2+='<th style="min-width:65px;background:rgba(46,170,74,0.05);">Target MTD</th>';
+  th2+='<th style="min-width:58px;background:rgba(46,170,74,0.05);">Avg/Bln</th>';
+  th2+='<th style="min-width:75px;background:rgba(46,170,74,0.05);">Growth vs 2025</th>';
+  th2+='<th style="min-width:62px;background:rgba(46,170,74,0.05);">GAP</th>';
+  th2+='</tr>';
+
+  document.getElementById('hist-unified-thead').innerHTML=th1+th2;
+
+  if(!filtered.length){
+    const totalCols=3+MO24.length+4+MO25.length+4+MO26.length+5;
+    document.getElementById('hist-unified-tbody').innerHTML='<tr class="no-data-row"><td colspan="'+totalCols+'">Tidak ada data sesuai filter.</td></tr>';
     document.getElementById('hist-chart-wrap').style.display='none';
-    document.getElementById('hist-tbody').innerHTML=
-      `<tr><td colspan="${colSpan}" style="text-align:center;padding:32px 16px;">
-        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:10px;color:var(--text-secondary);">
-          <i class="ti ti-chart-bar-off" style="font-size:32px;opacity:0.4;"></i>
-          <div style="font-size:12px;font-weight:500;">Belum ada data</div>
-          <div style="font-size:11px;opacity:0.7;">Upload file Target &amp; Penjualan melalui tombol <strong style="color:var(--bbl);">&#9881; Pengaturan</strong> untuk menampilkan performa historis per sales.</div>
-        </div>
-      </td></tr>`;
     return;
   }
-  document.getElementById('hist-tbody').innerHTML=SALES.map(s=>{
-    const data=HIST[s.code][yrn];
-    let tot=0,cnt=0;
-    const cells=visMo.map((_,i)=>{
-      const m=data[i];const p=pct(m.actual,m.target);
-      if(m.actual!=null){tot+=m.actual;cnt++;}
-      const bg=cellBg(p);
-      if(m.actual==null)return`<td style="text-align:center;color:var(--text-secondary);font-size:10px;">—</td>`;
-      return`<td style="${bg}padding:5px 7px;">
-        <div style="font-size:11px;font-weight:600;color:var(--text-primary);white-space:nowrap;line-height:1.3;">${fmtVal(m.actual)}</div>
-        <div style="font-size:10px;color:var(--text-secondary);white-space:nowrap;line-height:1.3;">${fmtVal(m.target)}</div>
-        <div style="margin-top:3px;font-size:9px;font-weight:500;color:${pctColor(p)};">${p}%</div>
-      </td>`;
-    }).join('');
-    const avg=cnt?tot/cnt:0;
-    let growth='—';
-    if(yrn>2024){
-      const prev=HIST[s.code][yrn-1].reduce((a,m)=>a+(m.actual||0),0);
-      if(prev>0){const g=Math.round((tot-prev)/prev*100);growth=`<span style="color:${g>=0?'#1B6A2E':'#8A2020'};font-weight:500;">${g>=0?'+':''}${g}%</span>`;}
+
+  const legendCell='<td style="font-size:9px;vertical-align:middle;padding:4px 5px;min-width:80px;">'+
+    '<div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#1B3F7A;flex-shrink:0;"></span><span style="font-weight:600;color:var(--text-primary);font-size:9px;">Actual</span></div>'+
+    '<div style="display:flex;align-items:center;gap:3px;margin-bottom:2px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:rgba(27,63,122,0.25);flex-shrink:0;"></span><span style="color:var(--text-secondary);font-size:9px;">Target</span></div>'+
+    '<div style="display:flex;align-items:center;gap:3px;"><span style="display:inline-block;width:7px;height:7px;border-radius:2px;background:#E24B4A;flex-shrink:0;opacity:0.7;"></span><span style="color:#8A2020;font-size:9px;">Gap</span></div>'+
+  '</td>';
+
+  function summCols(tot,totT,avg,growth,bg,hasGrowthAndGap){
+    const totGap=totT-tot;
+    const gHtml=growth!=null
+      ?'<span style="color:'+(growth>=0?'#1B6A2E':'#8A2020')+';font-weight:500;">'+(growth>=0?'+':'')+growth+'%</span>'
+      :'—';
+    let c='';
+    c+='<td style="background:'+bg+';font-size:10px;vertical-align:middle;padding:4px 5px;"><div style="font-weight:600;white-space:nowrap;">'+fmtVal(tot)+'</div></td>';
+    c+='<td style="background:'+bg+';font-size:9px;vertical-align:middle;padding:4px 5px;color:var(--text-secondary);">'+fmtVal(totT)+'</td>';
+    c+='<td style="background:'+bg+';font-size:9px;vertical-align:middle;padding:4px 5px;color:var(--text-secondary);">'+fmtVal(avg)+'</td>';
+    if(hasGrowthAndGap){
+      c+='<td style="background:'+bg+';font-size:9px;vertical-align:middle;padding:4px 5px;">'+gHtml+'</td>';
+      c+='<td style="background:'+bg+';font-size:9px;font-weight:500;vertical-align:middle;padding:4px 5px;color:'+(totGap>0?'#8A2020':'#1B6A2E')+';">'+(totGap>0?'▼ '+fmtVal(totGap):'✓')+'</td>';
+    } else {
+      c+='<td style="background:'+bg+';font-size:9px;font-weight:500;vertical-align:middle;padding:4px 5px;color:'+(totGap>0?'#8A2020':'#1B6A2E')+';">'+(totGap>0?'▼ '+fmtVal(totGap):'✓')+'</td>';
     }
-    return`<tr>
-      <td><span class="sales-code">${s.code}</span></td>
-      <td style="color:var(--text-secondary);font-size:10px;">${s.branch}</td>
-      <td style="font-size:10px;vertical-align:middle;">
-        <div style="display:flex;align-items:center;gap:4px;margin-bottom:3px;"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#1B3F7A;flex-shrink:0;"></span><span style="font-weight:600;color:var(--text-primary);">Penjualan</span></div>
-        <div style="display:flex;align-items:center;gap:4px;"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:rgba(27,63,122,0.25);flex-shrink:0;"></span><span style="color:var(--text-secondary);">Target</span></div>
-      </td>
-      ${cells}
-      <td style="font-weight:600;font-size:11px;white-space:nowrap;">${fmtVal(tot)}</td>
-      <td style="font-size:10px;color:var(--text-secondary);white-space:nowrap;">${fmtVal(avg)}</td>
-      <td style="font-size:10px;">${growth}</td>
-    </tr>`;
+    return c;
+  }
+
+  document.getElementById('hist-unified-tbody').innerHTML=filtered.map(s=>{
+    let row='<tr>';
+    row+='<td style="position:sticky;left:0;z-index:2;background:var(--bg-primary);padding:5px 6px;"><span class="sales-code">'+s.code+'</span></td>';
+    row+='<td style="position:sticky;left:80px;z-index:2;background:var(--bg-primary);color:var(--text-secondary);font-size:10px;padding:5px 6px;border-right:1px solid var(--bdr);">'+s.branch+'</td>';
+    row+=legendCell;
+
+    // 2024
+    let tot24=0,cnt24=0,totT24=0;
+    MO24.forEach((_,i)=>{
+      const m=HIST[s.code][2024][i];
+      const a=getActual(m),t=getTarget(m);
+      if(a!=null){tot24+=a;cnt24++;}
+      if(t!=null)totT24+=t;
+    });
+    row+=MO24.map((_,i)=>buildMonthCell(HIST[s.code][2024],i)).join('');
+    row+=summCols(tot24,totT24,cnt24?tot24/cnt24:0,null,'rgba(27,63,122,0.03)',false);
+
+    // 2025
+    let tot25=0,cnt25=0,totT25=0;
+    MO25.forEach((_,i)=>{
+      const m=HIST[s.code][2025][i];
+      const a=getActual(m),t=getTarget(m);
+      if(a!=null){tot25+=a;cnt25++;}
+      if(t!=null)totT25+=t;
+    });
+    const g25=tot24>0?Math.round((tot25-tot24)/tot24*100):null;
+    row+=MO25.map((_,i)=>buildMonthCell(HIST[s.code][2025],i)).join('');
+    row+=summCols(tot25,totT25,cnt25?tot25/cnt25:0,g25,'rgba(42,91,168,0.03)',true);
+
+    // 2026 YTD
+    let tot26=0,cnt26=0,totT26=0;
+    MO26.forEach((_,i)=>{
+      const m=HIST[s.code][2026][i];
+      const a=getActual(m),t=getTarget(m);
+      if(a!=null){tot26+=a;cnt26++;}
+      if(t!=null)totT26+=t;
+    });
+    const g26=tot25>0?Math.round((tot26-tot25)/tot25*100):null;
+    row+=MO26.map((_,i)=>buildMonthCell(HIST[s.code][2026],i)).join('');
+    row+=summCols(tot26,totT26,cnt26?tot26/cnt26:0,g26,'rgba(46,170,74,0.05)',true);
+
+    row+='</tr>';
+    return row;
   }).join('');
-  renderHistChart(yr,visMo);
+
+  renderHistChart('2026',MO26,filtered);
 }
-function renderHistChart(yr,visMo){
+
+function renderHistSummary(yr){}
+function renderHistTable(yr){}
+
+function renderHistChart(yr,visMo,filtered){
   const yrn=parseInt(yr);
+  if(!filtered||!filtered.length){document.getElementById('hist-chart-wrap').style.display='none';return;}
   document.getElementById('hist-chart-wrap').style.display='block';
-  const allA=visMo.map((_,i)=>{let s=0;SALES.forEach(sl=>{const m=HIST[sl.code][yrn][i];if(m&&m.actual)s+=m.actual;});return Math.round(s*100)/100;});
-  const allT=visMo.map((_,i)=>{let s=0;SALES.forEach(sl=>{const m=HIST[sl.code][yrn][i];if(m)s+=m.target;});return Math.round(s*100)/100;});
+  const allA=visMo.map((_,i)=>{let s=0;filtered.forEach(sl=>{const m=HIST[sl.code][yrn][i];s+=(getActual(m)||0);});return Math.round(s*100)/100;});
+  const allT=visMo.map((_,i)=>{let s=0;filtered.forEach(sl=>{const m=HIST[sl.code][yrn][i];s+=(getTarget(m)||0);});return Math.round(s*100)/100;});
   const ctx=document.getElementById('histLineChart').getContext('2d');
   if(histLineChart)histLineChart.destroy();
   histLineChart=new Chart(ctx,{type:'line',data:{labels:visMo,datasets:[
     {label:'Total Penjualan',data:allA,borderColor:'#1B3F7A',backgroundColor:'rgba(27,63,122,0.08)',fill:true,tension:0.3,pointRadius:4,pointBackgroundColor:'#1B3F7A'},
     {label:'Total Target',data:allT,borderColor:'#2EAA4A',borderDash:[5,5],backgroundColor:'transparent',fill:false,tension:0.3,pointRadius:3,pointBackgroundColor:'#2EAA4A'}
   ]},options:{responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${fmtRp(c.raw)}`}}},
-    scales:{x:{grid:{display:false},ticks:{font:{size:10},color:'#888',autoSkip:false,maxRotation:0}},y:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:10},color:'#888',callback:v=>fmtVal(v)}}}}
+    plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmtRp(c.raw)}}},
+    scales:{x:{grid:{display:false},ticks:{font:{size:10},color:'#888',autoSkip:false,maxRotation:0}},
+    y:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:10},color:'#888',callback:v=>activeUnit==='dus'?v.toLocaleString('id-ID'):v+'M'}}}}
   });
 }
-function setYear(yr,el){
-  activeYear=yr;
-  document.querySelectorAll('.yr-tag').forEach(e=>e.classList.remove('active'));
-  el.classList.add('active');
-  renderHistSummary(yr);renderHistTable(yr);
-}
+
 function setView(v,btn){
   document.querySelectorAll('.vtab').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('view-mtd').style.display=v==='mtd'?'block':'none';
   document.getElementById('view-hist').style.display=v==='hist'?'block':'none';
 }
+
 let barChart2,donutChart2;
 function buildBar(){
   const ctx=document.getElementById('barChart').getContext('2d');
@@ -726,491 +1051,882 @@ function buildDonut(){
     options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`${c.label}: ${c.raw}%`}}}}
   });
 }
-buildBar();buildDonut();renderMTD();renderHistSummary('2024');renderHistTable('2024');
-// Init setelah DOM siap
-document.addEventListener('DOMContentLoaded', function() {
-  checkAdminSession();
-  loadDataFromSheets();
-});
-// Fallback jika DOMContentLoaded sudah lewat
-if (document.readyState !== 'loading') {
-  setTimeout(() => { checkAdminSession(); loadDataFromSheets(); }, 0);
-}
 
-// ═══════════════════════════════════════
-// SETTINGS / UPLOAD MODULE
-// ═══════════════════════════════════════
+// ── INIT ──
+populateFilters();
+buildBar();buildDonut();
+renderMTD();
+renderAllYears();
+updateKPI();
 
-const uploadedFiles = { target: null, penjualan: null };
-
-// Mapping salesmanid → salesperson code normalization
-// e.g. BDG-KV-01 → BDG-KVTO-01
-// We build this dynamically from target upload, then apply to penjualan
-let salesmanIdMap = {}; // target salesmanid → normalized key
-
-function openSettings() {
-  if (!isAdmin) { openLoginModal(); return; }
-  document.getElementById('settingsModal').classList.add('open');
-}
-function closeSettings() {
-  document.getElementById('settingsModal').classList.remove('open');
-}
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('settingsModal').addEventListener('click', function(e) {
-    if (e.target === this) closeSettings();
-  });
-});
-
-// ── DRAG & DROP ──
-function dzDragOver(e, id) { e.preventDefault(); document.getElementById(id).classList.add('drag-over'); }
-function dzDragLeave(id) { document.getElementById(id).classList.remove('drag-over'); }
-function dzDrop(e, type) {
-  e.preventDefault();
-  document.getElementById('dz-' + type).classList.remove('drag-over');
-  const file = e.dataTransfer.files[0];
-  if (file) applyFile(type, file);
-}
-function fileChosen(type) {
-  const inp = document.getElementById('file-' + type);
-  if (inp.files[0]) applyFile(type, inp.files[0]);
-}
-function applyFile(type, file) {
-  const ext = file.name.split('.').pop().toLowerCase();
-  if (!['xlsx','xls'].includes(ext)) {
-    setStatus(type, 'err', '<i class="ti ti-alert-circle"></i> File harus berformat .xlsx atau .xls'); return;
-  }
-  const maxSize = type === 'penjualan' ? 20 * 1024 * 1024 : 5 * 1024 * 1024;
-  const maxLabel = type === 'penjualan' ? '20 MB' : '5 MB';
-  if (file.size > maxSize) {
-    setStatus(type, 'err', '<i class="ti ti-alert-circle"></i> Ukuran file melebihi ' + maxLabel); return;
-  }
-  uploadedFiles[type] = file;
-  document.getElementById('fi-' + type + '-name').textContent = file.name;
-  document.getElementById('fi-' + type + '-size').textContent = formatSize(file.size);
-  document.getElementById('fi-' + type).classList.add('show');
-  setStatus(type, 'ok', '<i class="ti ti-circle-check"></i> File siap: <strong>' + file.name + '</strong>');
-}
-function clearFile(type) {
-  uploadedFiles[type] = null;
-  document.getElementById('file-' + type).value = '';
-  document.getElementById('fi-' + type).classList.remove('show');
-  const us = document.getElementById('us-' + type);
-  us.className = 'upload-status'; us.innerHTML = '';
-}
-function setStatus(type, cls, html) {
-  const el = document.getElementById('us-' + type);
-  el.className = 'upload-status show ' + cls;
-  el.innerHTML = html;
-}
-function formatSize(bytes) {
-  if (bytes < 1024) return bytes + ' B';
-  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-  return (bytes / 1024 / 1024).toFixed(2) + ' MB';
-}
-
-// ── PROSES UPLOAD ──
-function processUpload() {
-  const hasTarget = !!uploadedFiles.target;
-  const hasPenjualan = !!uploadedFiles.penjualan;
-  if (!hasTarget && !hasPenjualan) { showToast('Pilih minimal satu file untuk diproses.', true); return; }
-
-  const btn = document.getElementById('btn-process');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="ti ti-loader ti-spin"></i> Memproses...';
-
-  // Process sequentially: target first (to build salesman map), then penjualan
-  const doTarget = () => new Promise((resolve) => {
-    if (!hasTarget) { resolve(); return; }
-    setStatus('target', 'loading', '<i class="ti ti-loader"></i> Membaca file target...');
-    parseXlsx(uploadedFiles.target, 'target', (rows, err) => {
-      if (err) { setStatus('target', 'err', '<i class="ti ti-alert-circle"></i> ' + err); resolve(); return; }
-      uploadedFiles._targetRows = rows;
-      const result = applyTargetData(rows);
-      setStatus('target', 'ok',
-        '<i class="ti ti-circle-check"></i> Target diterapkan — <strong>' + result.applied + ' record</strong> dari ' + rows.length +
-        ' baris &nbsp;|&nbsp; ' + result.salesFound + ' sales &nbsp;|&nbsp; ' + result.skipped + ' baris dilewati'
-      );
-      resolve();
-    });
-  });
-
-  const doPenjualan = () => new Promise((resolve) => {
-    if (!hasPenjualan) { resolve(); return; }
-    setStatus('penjualan', 'loading', '<i class="ti ti-loader"></i> Membaca file penjualan...');
-    parseXlsx(uploadedFiles.penjualan, 'penjualan', (rows, err) => {
-      if (err) { setStatus('penjualan', 'err', '<i class="ti ti-alert-circle"></i> ' + err); resolve(); return; }
-      uploadedFiles._penjualanRows = rows;
-      const result = applyPenjualanData(rows);
-      setStatus('penjualan', 'ok',
-        '<i class="ti ti-circle-check"></i> Penjualan diterapkan — <strong>' + result.applied + ' record</strong> dari ' + rows.length +
-        ' baris &nbsp;|&nbsp; ' + result.salesFound + ' sales &nbsp;|&nbsp; ' + result.skipped + ' baris dilewati'
-      );
-      resolve();
-    });
-  });
-
-  doTarget().then(doPenjualan).then(() => {
-    btn.disabled = false;
-    btn.innerHTML = '<i class="ti ti-database-import"></i> Proses &amp; Terapkan';
-    renderMTD();
-    renderHistSummary(activeYear);
-    renderHistTable(activeYear);
-    dataLoaded=true;
-    showToast('Dashboard berhasil diperbarui dari data import.');
-    // Upload ke Google Sheets jika sudah dikonfigurasi
-    if (APPS_SCRIPT_URL && !APPS_SCRIPT_URL.includes('YOUR_SCRIPT_ID')) {
-      const tasks = [];
-      if (hasTarget && uploadedFiles._targetRows) tasks.push(uploadToSheets('target', uploadedFiles._targetRows));
-      if (hasPenjualan && uploadedFiles._penjualanRows) tasks.push(uploadToSheets('penjualan', uploadedFiles._penjualanRows));
-      if (tasks.length) {
-        Promise.all(tasks).then(results => {
-          const allOk = results.every(r => r.success);
-          showToast(allOk ? 'Data tersimpan ke Google Sheets!' : 'Data diterapkan lokal, gagal simpan ke Sheets.', !allOk);
-        });
-      }
-    }
-  });
-}
-
-// ── XLSX READER — uses native DecompressionStream to bypass XLSX 0.18.5 ZIP bug ──
-function readU16(b,o){return b[o]|(b[o+1]<<8);}
-function readU32(b,o){return((b[o]|(b[o+1]<<8)|(b[o+2]<<16)|(b[o+3]<<24))>>>0);}
-
-async function unzipXlsx(u8) {
-  const files = {};
-  let i = 0;
-  while (i < u8.length - 4) {
-    if (readU32(u8,i) !== 0x04034b50) { i++; continue; }
-    const flags    = readU16(u8, i+6);
-    const method   = readU16(u8, i+8);
-    let compSize   = readU32(u8, i+18);
-    let uncompSize = readU32(u8, i+22);
-    const fnLen    = readU16(u8, i+26);
-    const extLen   = readU16(u8, i+28);
-    const dataOff  = i + 30 + fnLen + extLen;
-    let fname = '';
-    for (let j=0; j<fnLen; j++) fname += String.fromCharCode(u8[i+30+j]);
-
-    // If sizes are 0 (data descriptor flag), scan forward for next entry
-    if ((flags & 0x08) && compSize === 0) {
-      let scan = dataOff;
-      while (scan < u8.length - 4) {
-        const s4 = readU32(u8, scan);
-        if (s4 === 0x04034b50 || s4 === 0x02014b50) break;
-        scan++;
-      }
-      // data descriptor may or may not have signature 0x08074b50
-      const ddSig = readU32(u8, scan-16);
-      if (ddSig === 0x08074b50) {
-        compSize   = readU32(u8, scan-8);
-        uncompSize = readU32(u8, scan-4);
-      } else {
-        compSize   = readU32(u8, scan-12);
-        uncompSize = readU32(u8, scan-8);
-      }
-      if (compSize === 0 || compSize > scan - dataOff) compSize = scan - dataOff;
-    }
-
-    const chunk = u8.slice(dataOff, dataOff + compSize);
-    if (method === 0) {
-      files[fname] = chunk; // stored
-    } else if (method === 8) {
-      // deflate-raw via DecompressionStream
-      try {
-        const ds = new DecompressionStream('deflate-raw');
-        const writer = ds.writable.getWriter();
-        const reader = ds.readable.getReader();
-        writer.write(chunk);
-        writer.close();
-        const parts = [];
-        try { while(true){ const {done,value}=await reader.read(); if(done)break; parts.push(value); } } catch(e){}
-        const total = parts.reduce((a,c)=>a+c.length,0);
-        const out = new Uint8Array(total);
-        let off2=0; for(const p of parts){out.set(p,off2);off2+=p.length;}
-        files[fname] = out;
-      } catch(e) {
-        console.warn('DecompressionStream failed for', fname, e.message);
-        // Try XLSX internal as fallback
-        files[fname] = chunk;
-      }
-    }
-    i = dataOff + compSize;
-  }
-  return files;
-}
-
-function bytesToStr(u8) {
-  try { return new TextDecoder('utf-8').decode(u8); } catch(e) {
-    let s=''; for(let i=0;i<u8.length;i++) s+=String.fromCharCode(u8[i]); return s;
-  }
-}
-
-function xlsxFilesToWorkbook(files) {
-  // Feed XML files into XLSX.read via in-memory reconstruction
-  // Actually we just use XLSX.utils directly on the parsed data
-  // by building a fake workbook with DOMParser
-  const dp = new DOMParser();
-
-  // Shared strings
-  let sharedStrs = [];
-  const ssKey = Object.keys(files).find(k => /xl\/sharedStrings/i.test(k));
-  if (ssKey && files[ssKey]) {
-    const xml = bytesToStr(files[ssKey]);
-    const doc = dp.parseFromString(xml, 'application/xml');
-    const sis = doc.getElementsByTagName('si');
-    for (let i=0;i<sis.length;i++) {
-      const ts = sis[i].getElementsByTagName('t');
-      let v=''; for(let j=0;j<ts.length;j++) v+=(ts[j].textContent||'');
-      sharedStrs.push(v);
-    }
-  }
-
-  // Styles — for date detection
-  const numFmtMap = {};
-  const xfList = [];
-  const stKey = Object.keys(files).find(k => /xl\/styles/i.test(k));
-  if (stKey && files[stKey]) {
-    try {
-      const doc = dp.parseFromString(bytesToStr(files[stKey]),'application/xml');
-      doc.querySelectorAll('numFmt').forEach(n => {
-        numFmtMap[n.getAttribute('numFmtId')] = n.getAttribute('formatCode')||'';
-      });
-      doc.querySelectorAll('cellXfs xf').forEach(n => {
-        xfList.push(parseInt(n.getAttribute('numFmtId')||'0'));
-      });
-    } catch(e){}
-  }
-  function isDateFmt(fmtId) {
-    if (fmtId>=14&&fmtId<=22) return true;
-    if (fmtId>=45&&fmtId<=47) return true;
-    const fs = numFmtMap[fmtId]||'';
-    return /[ymdhYMDH]/.test(fs) && !/^[#0,.\s%]+$/.test(fs);
-  }
-
-  // Sheet names
-  let sheetNames = ['Sheet1'];
-  const wbKey = Object.keys(files).find(k => /xl\/workbook\.xml$/i.test(k));
-  if (wbKey && files[wbKey]) {
-    const doc = dp.parseFromString(bytesToStr(files[wbKey]),'application/xml');
-    const els = doc.getElementsByTagName('sheet');
-    if (els.length) {
-      sheetNames = [];
-      for(let i=0;i<els.length;i++) sheetNames.push(els[i].getAttribute('name')||('Sheet'+(i+1)));
-    }
-  }
-
-  // First worksheet
-  const wsKeys = Object.keys(files).filter(k=>/xl\/worksheets\/sheet\d*\.xml$/i.test(k)).sort();
-  if (!wsKeys.length) throw new Error('Tidak ada worksheet ditemukan.');
-  const wsXml = bytesToStr(files[wsKeys[0]]);
-
-  // Build XLSX-compatible sheet object using XLSX utils
-  // We rebuild the sheet as an object XLSX.utils.sheet_to_json can read
-  const doc = dp.parseFromString(wsXml, 'application/xml');
-  function colIdx(c){let n=0;for(let i=0;i<c.length;i++)n=n*26+(c.charCodeAt(i)-64);return n-1;}
-  const sheet = {};
-  let maxR=0, maxC=0;
-  const cells = doc.getElementsByTagName('c');
-  for (let i=0;i<cells.length;i++) {
-    const cell = cells[i];
-    const ref = cell.getAttribute('r'); if(!ref) continue;
-    const m = ref.match(/^([A-Z]+)(\d+)$/); if(!m) continue;
-    const c = colIdx(m[1]), r = parseInt(m[2])-1;
-    const t = cell.getAttribute('t')||'n';
-    const s = parseInt(cell.getAttribute('s')||'-1');
-    const vEl = cell.getElementsByTagName('v')[0];
-    const v = vEl ? vEl.textContent : '';
-    let val;
-    if (t==='s') { val = sharedStrs[parseInt(v)]||''; }
-    else if (t==='str'||t==='inlineStr') {
-      const ts=cell.getElementsByTagName('t'); val='';
-      for(let j=0;j<ts.length;j++) val+=ts[j].textContent||'';
-    } else if (t==='b') { val = v==='1'?true:false; }
-    else {
-      const n=parseFloat(v);
-      if(!isNaN(n)&&v!=='') {
-        const fmtId = s>=0&&xfList[s]!=null ? xfList[s] : -1;
-        if(fmtId>=0 && isDateFmt(fmtId)) {
-          const d=new Date(Math.round((n-25569)*86400*1000));
-          val=String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();
-        } else { val=n; }
-      } else { val=v; }
-    }
-    // XLSX cell address format
-    sheet[ref] = { v: val, t: typeof val==='number'?'n':typeof val==='boolean'?'b':'s', w: String(val) };
-    if(r>maxR) maxR=r; if(c>maxC) maxC=c;
-  }
-  // Set !ref range
-  function idxToCol(n){let s='';n++;while(n>0){n--;s=String.fromCharCode(65+(n%26))+s;n=Math.floor(n/26);}return s;}
-  sheet['!ref'] = 'A1:'+idxToCol(maxC)+String(maxR+1);
-
-  const Sheets = {};
-  Sheets[sheetNames[0]] = sheet;
-  return { SheetNames: sheetNames, Sheets };
-}
-
-function parseXlsx(file, type, callback) {
-  if (typeof XLSX === 'undefined') {
-    callback(null, 'Library XLSX belum siap. Reload halaman dan pastikan koneksi internet aktif.');
-    return;
-  }
-  const reader = new FileReader();
-  reader.onload = async function(e) {
-    try {
-      const u8 = new Uint8Array(e.target.result);
-      // Check ZIP magic bytes
-      if (u8[0]!==0x50||u8[1]!==0x4B) {
-        // Not ZIP — try legacy XLS via XLSX directly
-        throw new Error('Bukan format ZIP/XLSX');
-      }
-      // Unzip ourselves (fixes Bad uncompressed size bug)
-      const files = await unzipXlsx(u8);
-      const wb = xlsxFilesToWorkbook(files);
-      const ws = wb.Sheets[wb.SheetNames[0]];
-      const rows = XLSX.utils.sheet_to_json(ws, { defval: '', raw: false });
-      if (!rows.length) { callback(null, 'Sheet pertama kosong atau tidak ada data.'); return; }
-      console.log('Parsed', rows.length, 'rows via native DecompressionStream');
-      callback(rows, null);
-    } catch(err) {
-      console.warn('Native parser failed:', err.message, '— falling back to XLSX.read');
-      // Fallback: try XLSX.read directly
-      const raw = e.target.result;
-      const data = new Uint8Array(raw);
-      const strategies = [
-        ()=>XLSX.read(data,{type:'array',cellDates:true}),
-        ()=>XLSX.read(data,{type:'array',cellDates:false}),
-        ()=>XLSX.read(raw, {type:'buffer',cellDates:true}),
-      ];
-      let wb=null, lastErr=null;
-      for(let i=0;i<strategies.length;i++){
-        try{ wb=strategies[i](); if(wb&&wb.SheetNames&&wb.SheetNames.length) break; }
-        catch(e2){ lastErr=e2; wb=null; }
-      }
-      if(!wb){
-        callback(null,'Gagal membaca file: '+(lastErr?lastErr.message:'unknown')+'. Pastikan file .xlsx tidak terproteksi password.');
-        return;
-      }
-      try {
-        const ws=wb.Sheets[wb.SheetNames[0]];
-        const rows=XLSX.utils.sheet_to_json(ws,{defval:'',raw:false});
-        if(!rows.length){callback(null,'Sheet pertama kosong.');return;}
-        callback(rows,null);
-      } catch(e3){ callback(null,'Gagal membaca sheet: '+e3.message); }
-    }
-  };
-  reader.onerror = ()=>callback(null,'Gagal membuka file.');
-  reader.readAsArrayBuffer(file);
-}
-// ── DOWNLOAD TEMPLATE ──
-function downloadTemplate(type) {
-  if (typeof XLSX === 'undefined') { showToast('Library XLSX belum dimuat. Periksa koneksi internet Anda dan coba reload halaman.', true); return; }
-  let ws_data, filename;
-  if (type === 'target') {
-    const header = ['bulan','tahun','siteid','nama_site','brandid','nama_brand','salesmanid','nama_salesman','groupid','nama_group','maaping_group','sales_6_bulan','target_product'];
-    const example = [];
-    SALES.slice(0,3).forEach((s,si) => {
-      [1,2,3,4,5].forEach(bln => {
-        example.push([bln, 2026, 'SITE-00'+(si+1), s.branch, 'BRD-01', 'Produk A', s.code, 'Salesman '+s.code, 'GRP-01', 'Produk A', 'GROUP_A', 5000000, 8000000]);
-      });
-    });
-    ws_data = [header, ...example];
-    filename = 'template_target.xlsx';
-  } else {
-    const header = ['Sell To Customer Code','Salesperson','Invoice Date','Branch Name','Brand Reguler Breakdown','Product Name Breakdown','Line Incl Ppn','Qty In Max Uom Breakdown'];
-    const example = [];
-    SALES.slice(0,3).forEach((s,si) => {
-      [1,2,3,4,5].forEach(bln => {
-        example.push(['CUST-001', s.code, '0'+bln+'/01/2026', s.branch, 'Produk A', 'SKU-001-A', 7500000, 12]);
-      });
-    });
-    ws_data = [header, ...example];
-    filename = 'template_penjualan.xlsx';
-  }
-  const ws = XLSX.utils.aoa_to_sheet(ws_data);
-  // Style header row width
-  ws['!cols'] = ws_data[0].map(() => ({ wch: 22 }));
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, 'Data');
-  XLSX.writeFile(wb, filename);
-  showToast('Template ' + (type==='target' ? 'Target' : 'Penjualan') + ' berhasil diunduh.');
-}
-
-// ── TOAST ──
-function showToast(msg, isErr) {
-  const t = document.getElementById('toast');
-  const ic = document.getElementById('toast-icon');
-  document.getElementById('toast-msg').textContent = msg;
-  t.style.background = isErr ? '#8A2020' : '#1B3F7A';
-  ic.className = isErr ? 'ti ti-alert-circle' : 'ti ti-check';
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3500);
-}
-
-
-// Responsive charts-row: pindah ke stacked saat lebar < 560px
 (function(){
-  const row = document.querySelector('.charts-row');
-  let rafId = null;
+  const row=document.querySelector('.charts-row');
+  let rafId=null;
   function checkWidth(){
-    if(rafId) return;
-    rafId = requestAnimationFrame(function(){
-      rafId = null;
-      if(row.offsetWidth < 560){
-        row.classList.add('stacked');
-      } else {
-        row.classList.remove('stacked');
-      }
+    if(rafId)return;
+    rafId=requestAnimationFrame(function(){
+      rafId=null;
+      if(row.offsetWidth<560){row.classList.add('stacked');}
+      else{row.classList.remove('stacked');}
     });
   }
   checkWidth();
   if(window.ResizeObserver){
-    const ro = new ResizeObserver(function(entries){
-      // Prevent loop: only act if size actually changed
-      for(const entry of entries){
-        checkWidth();
-      }
-    });
+    const ro=new ResizeObserver(function(){checkWidth();});
     ro.observe(row);
-  } else {
-    window.addEventListener('resize', checkWidth);
-  }
+  }else{window.addEventListener('resize',checkWidth);}
 })();
+
+
+// ══════════════════════════════════════════════════════
+// SETTING & AUTH LOGIC
+// ══════════════════════════════════════════════════════
+const ADMIN_USER = 'admin';
+const ADMIN_PASS = 'bima2026';
+let isAdminLoggedIn = false;
+
+function openSetting() {
+  if (isAdminLoggedIn) {
+    openSettingsPanel();
+  } else {
+    openAuthModal();
+  }
+}
+
+function openAuthModal() {
+  document.getElementById('auth-user').value = '';
+  document.getElementById('auth-pass').value = '';
+  document.getElementById('auth-error').classList.remove('show');
+  document.getElementById('modal-auth').classList.add('active');
+  setTimeout(() => document.getElementById('auth-user').focus(), 100);
+}
+
+function closeAuth() {
+  document.getElementById('modal-auth').classList.remove('active');
+}
+
+function doAuth() {
+  const user = document.getElementById('auth-user').value.trim();
+  const pass = document.getElementById('auth-pass').value;
+  if (user === ADMIN_USER && pass === ADMIN_PASS) {
+    isAdminLoggedIn = true;
+    document.getElementById('modal-auth').classList.remove('active');
+    openSettingsPanel();
+  } else {
+    document.getElementById('auth-error').classList.add('show');
+    document.getElementById('auth-pass').value = '';
+    document.getElementById('auth-pass').focus();
+    // shake animation
+    const modal = document.querySelector('.auth-modal');
+    modal.style.animation = 'shake 0.35s ease';
+    setTimeout(() => modal.style.animation = '', 400);
+  }
+}
+
+function openSettingsPanel() {
+  document.getElementById('modal-settings').classList.add('active');
+}
+
+function closeSetting() {
+  document.getElementById('modal-settings').classList.remove('active');
+}
+
+function logoutAdmin() {
+  isAdminLoggedIn = false;
+  closeSetting();
+}
+
+// Close modals when clicking overlay
+document.getElementById('modal-auth').addEventListener('click', function(e) {
+  if (e.target === this) closeAuth();
+});
+document.getElementById('modal-settings').addEventListener('click', function(e) {
+  if (e.target === this) closeSetting();
+});
+
+// Shake keyframes
+const shakeStyle = document.createElement('style');
+shakeStyle.textContent = '@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}';
+document.head.appendChild(shakeStyle);
+
+// ══════════════════════════════════════════════════════
+// DATA STORE — uploaded data lives here
+// ══════════════════════════════════════════════════════
+// uploadedTarget: array of raw target rows (after normalization)
+// uploadedPenjualan: array of raw penjualan rows
+// rbpMap: { namaGroup: rbpValue }
+// aggregated HIST data rebuilt from uploads
+
+let uploadedTargetRows = [];   // normalized target rows
+let uploadedPenjualanRows = []; // normalized penjualan rows
+let rbpMap = {};               // namaGroup (lower) → rbp price
+
+// ── NORMALIZE column keys ──
+function normKey(k){ return k.toString().toLowerCase().trim().replace(/\s+/g,'_'); }
+function normRow(obj){
+  const n={};
+  Object.keys(obj).forEach(k=>{ n[normKey(k)] = obj[k]; });
+  return n;
+}
+
+// ── PARSE date from various formats → {month, year} or null ──
+function parseInvoiceDate(val){
+  if(!val) return null;
+  let d;
+  // Excel serial number
+  if(typeof val === 'number'){
+    d = new Date(Math.round((val - 25569)*86400*1000));
+    return {month: d.getUTCMonth()+1, year: d.getUTCFullYear()};
+  }
+  const s = val.toString().trim();
+  // DD/MM/YYYY
+  let m = s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if(m){ return {month:parseInt(m[2]), year:parseInt(m[3])}; }
+  // YYYY-MM-DD
+  m = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if(m){ return {month:parseInt(m[2]), year:parseInt(m[1])}; }
+  // Try native parse
+  d = new Date(s);
+  if(!isNaN(d)){ return {month:d.getMonth()+1, year:d.getFullYear()}; }
+  return null;
+}
+
+// ── REBUILD aggregated HIST from uploaded rows ──
+function rebuildHIST(){
+  if(!uploadedTargetRows.length && !uploadedPenjualanRows.length) return;
+
+  const logs = [];
+
+  // Build a fresh HIST-like structure keyed by salesmanid
+  // We'll merge INTO the existing HIST using salesmanid as key
+  // Clear existing data first for all known codes
+  SALES.forEach(s=>{
+    [2024,2025,2026].forEach(yr=>{
+      HIST[s.code][yr] = Array(12).fill(null).map(()=>({actual:null,target:null,actualDus:null,targetDus:null}));
+    });
+  });
+
+  let tUpdated=0, aUpdated=0;
+
+  // ── Apply TARGET rows ──
+  uploadedTargetRows.forEach((row,idx)=>{
+    const salesId  = (row['salesmanid']||'').toString().trim().toUpperCase();
+    const year     = parseInt(row['tahun']);
+    const month    = parseInt(row['bulan']);
+    const tVal     = parseFloat(row['target_product']);
+    const tDusRaw  = parseFloat(row['target_product_in_dus']);
+    const namaGroup= (row['nama_group']||'').toString().trim().toLowerCase();
+
+    if(!salesId||isNaN(year)||isNaN(month)||month<1||month>12) return;
+
+    // Find matching SALES entry by code
+    const salesEntry = SALES.find(s=>s.code.toUpperCase()===salesId);
+    if(!salesEntry) return;
+
+    const mi = month-1;
+    if(!HIST[salesEntry.code][year]) HIST[salesEntry.code][year]=Array(12).fill(null).map(()=>({actual:null,target:null,actualDus:null,targetDus:null}));
+
+    const cell = HIST[salesEntry.code][year][mi];
+
+    // Accumulate target (multiple products → sum)
+    if(!isNaN(tVal)){
+      cell.target = (cell.target||0) + tVal / 1e6; // store in Millions
+    }
+
+    // Compute dus from rbp if available
+    const rbp = rbpMap[namaGroup];
+    if(rbp && !isNaN(tVal)){
+      cell.targetDus = Math.round((cell.targetDus||0) + tVal/rbp);
+    } else if(!isNaN(tDusRaw)){
+      cell.targetDus = (cell.targetDus||0) + Math.round(tDusRaw);
+    }
+
+    tUpdated++;
+  });
+
+  // ── Apply PENJUALAN rows ──
+  // First aggregate by salesmanid+year+month
+  const aggMap = {}; // key: "salesId|year|month" → {actualVal, actualDus}
+  uploadedPenjualanRows.forEach(row=>{
+    const salesId = (row['salesperson']||'').toString().trim().toUpperCase();
+    const dateParsed = parseInvoiceDate(row['invoice_date']);
+    if(!dateParsed||!salesId) return;
+    const {month,year} = dateParsed;
+    const lineVal  = parseFloat(row['line_incl_ppn']);
+    const qtyDus   = parseFloat(row['qty_in_max_uom_breakdown']);
+    const key = salesId+'|'+year+'|'+month;
+    if(!aggMap[key]) aggMap[key]={val:0,dus:0};
+    if(!isNaN(lineVal)) aggMap[key].val += lineVal;
+    if(!isNaN(qtyDus))  aggMap[key].dus += qtyDus;
+  });
+
+  Object.entries(aggMap).forEach(([key,agg])=>{
+    const parts = key.split('|');
+    const salesId = parts[0];
+    const year    = parseInt(parts[1]);
+    const month   = parseInt(parts[2]);
+    const mi      = month-1;
+
+    const salesEntry = SALES.find(s=>s.code.toUpperCase()===salesId);
+    if(!salesEntry) return;
+
+    if(!HIST[salesEntry.code][year]) HIST[salesEntry.code][year]=Array(12).fill(null).map(()=>({actual:null,target:null,actualDus:null,targetDus:null}));
+
+    const cell = HIST[salesEntry.code][year][mi];
+    cell.actual    = Math.round((agg.val/1e6)*1000)/1000; // in Millions
+    cell.actualDus = Math.round(agg.dus);
+    aUpdated++;
+  });
+
+  logs.push('🔄 Rebuild selesai');
+  logs.push('🎯 Target entries processed: '+tUpdated);
+  logs.push('📈 Penjualan aggregated: '+aUpdated+' periode');
+
+  // Refresh dashboard
+  renderMTD();
+  renderAllYears();
+  updateKPI();
+  return logs;
+}
+
+// ── BUILD RBP TABLE from uploaded target products ──
+function buildRBPTable(){
+  // Collect unique products from target rows
+  const products = {};
+  uploadedTargetRows.forEach(row=>{
+    const g = (row['nama_group']||'').toString().trim();
+    const b = (row['nama_brand']||row['brandid']||'').toString().trim();
+    if(g) products[g.toLowerCase()] = {display:g, brand:b};
+  });
+
+  const tbody = document.getElementById('rbp-tbody');
+  const keys = Object.keys(products);
+  if(!keys.length){ document.getElementById('rbp-section').style.display='none'; return; }
+
+  tbody.innerHTML = keys.map(k=>{
+    const p = products[k];
+    const existing = rbpMap[k]||'';
+    return '<tr style="border-bottom:0.5px solid var(--bdr);">' +
+      '<td style="padding:6px 8px;font-size:11px;color:var(--text-primary);">'+p.display+'</td>' +
+      '<td style="padding:6px 8px;font-size:11px;color:var(--text-secondary);">'+p.brand+'</td>' +
+      '<td style="padding:6px 8px;text-align:right;">' +
+        '<input type="number" step="1000" min="0" data-group="'+k+'" value="'+(existing||'')+'" ' +
+        'style="width:120px;padding:5px 8px;border:1px solid var(--bdr);border-radius:6px;font-size:11px;text-align:right;background:var(--bg-secondary);outline:none;" ' +
+        'placeholder="0" onchange="rbpMap[this.dataset.group]=parseFloat(this.value)||0">' +
+      '</td>' +
+    '</tr>';
+  }).join('');
+
+  document.getElementById('rbp-section').style.display='block';
+}
+
+function applyRBP(){
+  // Read all inputs
+  document.querySelectorAll('#rbp-tbody input').forEach(inp=>{
+    const v = parseFloat(inp.value);
+    if(!isNaN(v) && v>0) rbpMap[inp.dataset.group] = v;
+  });
+  const logs = rebuildHIST();
+  if(logs && logs.length){
+    document.getElementById('rbp-log').innerHTML = logs.join('<br>');
+    document.getElementById('rbp-log-section').style.display='block';
+  }
+  const st = document.getElementById('rbp-status');
+  st.style.display='block';
+  st.textContent = '✅ Harga RBP diterapkan & target dus dihitung ulang. Dashboard diperbarui.';
+  setTimeout(()=>st.style.display='none', 3000);
+}
+
+// ══════════════════════════════════════════════════════
+// SETTINGS TAB SWITCHING
+// ══════════════════════════════════════════════════════
+function switchStab(id, btn){
+  document.querySelectorAll('.stab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.stab-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('stab-'+id).classList.add('active');
+}
+
+// ══════════════════════════════════════════════════════
+// GOOGLE DRIVE AUTO-LOAD
+// ══════════════════════════════════════════════════════
+const GD_FOLDER_IDS = {
+  penjualan: '1gJeYLe4XjSfl51k98eFDNuUEzHGuLogD',
+  target:    '1ILvUY0k0msUIDPLiLzIDLfmdWMIl_xjL'
+};
+
+function editFolderId(type){
+  const current = document.getElementById('gd-folderid-'+type).textContent.trim();
+  const val = prompt('Masukkan Folder ID Google Drive untuk ' + (type==='penjualan'?'Penjualan':'Target') + ':', current);
+  if(val && val.trim()){
+    GD_FOLDER_IDS[type] = val.trim();
+    document.getElementById('gd-folderid-'+type).textContent = val.trim();
+  }
+}
+
+function setGDStatus(type, cls, html){
+  const el = document.getElementById('gd-status-'+type);
+  el.className = 'gdrive-status-box ' + cls;
+  el.innerHTML = html;
+}
+
+function setGDFiles(type, files){
+  const el = document.getElementById('gd-files-'+type);
+  if(!files || !files.length){ el.innerHTML=''; return; }
+  el.innerHTML = files.map(f=>`
+    <div class="gdrive-file-item" id="gdfile-${f.id}">
+      <span class="fname"><i class="ti ti-file-spreadsheet" style="font-size:12px;color:#1B6A2E;margin-right:4px;"></i>${f.name}</span>
+      <span class="fstatus fstatus-load" id="gdstatus-${f.id}">⏳ Memuat...</span>
+    </div>`).join('');
+}
+
+async function ensureXLSX(){
+  if(typeof XLSX !== 'undefined') return;
+  return new Promise((res,rej)=>{
+    const s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+    s.onload=res; s.onerror=rej;
+    document.head.appendChild(s);
+  });
+}
+
+// Apps Script Web App URLs — diisi user setelah setup Apps Script
+let GD_APPS_SCRIPT_URLS = {
+  penjualan: 'https://script.google.com/macros/s/AKfycbzqL_MR-0CLUnPw-nKQkGZKBIpeZZQ5VQ3XbDvj8E3t0qIuTlnGhOlHU3rjVzoIoYyg/exec',
+  target:    'https://script.google.com/macros/s/AKfycbzqL_MR-0CLUnPw-nKQkGZKBIpeZZQ5VQ3XbDvj8E3t0qIuTlnGhOlHU3rjVzoIoYyg/exec'
+};
+
+// Fetch folder listing via Apps Script Web App (no API key needed)
+async function fetchGDriveFolder(type){
+  const scriptUrl = GD_APPS_SCRIPT_URLS[type];
+  if(!scriptUrl || !scriptUrl.trim()){
+    throw new Error('URL Apps Script belum diisi. Klik "Panduan Setup" di tab Google Drive untuk instruksi, lalu masukkan URL di kolom yang tersedia.');
+  }
+  const folderId = GD_FOLDER_IDS[type];
+  const url = scriptUrl.trim() + '?folderId=' + folderId + '&t=' + Date.now();
+  let resp;
+  try { resp = await fetch(url); }
+  catch(e){ throw new Error('Tidak bisa menghubungi Apps Script. Periksa URL dan pastikan Apps Script sudah di-deploy sebagai "Anyone".'); }
+  if(!resp.ok) throw new Error('Apps Script HTTP ' + resp.status);
+  const data = await resp.json();
+  if(data.error) throw new Error(data.error);
+  return data.files || [];
+}
+
+async function downloadGDriveFile(fileId){
+  // Direct download via export URL
+  const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  const resp = await fetch(url);
+  if(!resp.ok) throw new Error('HTTP '+resp.status);
+  return await resp.arrayBuffer();
+}
+
+function processGDriveXLSX(arrayBuffer, type, fileName){
+  const data = new Uint8Array(arrayBuffer);
+  const wb   = XLSX.read(data,{type:'array',cellDates:false});
+  const ws   = wb.Sheets[wb.SheetNames[0]];
+  const rows = XLSX.utils.sheet_to_json(ws,{defval:null});
+  if(!rows.length) return 0;
+  const normRows = rows.map(normRow);
+  if(type==='target'){
+    uploadedTargetRows = uploadedTargetRows.concat(normRows);
+    buildRBPTable();
+  } else {
+    uploadedPenjualanRows = uploadedPenjualanRows.concat(normRows);
+  }
+  return normRows.length;
+}
+
+async function loadFromGDrive(){
+  const btn = document.getElementById('btn-gdrive-load');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader-2" style="font-size:13px;animation:spin 1s linear infinite;"></i> Memuat...';
+
+  // Inject spin animation
+  if(!document.getElementById('spin-style')){
+    const ss=document.createElement('style');
+    ss.id='spin-style';
+    ss.textContent='@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}';
+    document.head.appendChild(ss);
+  }
+
+  // Clear existing uploaded data
+  uploadedTargetRows = [];
+  uploadedPenjualanRows = [];
+
+  try { await ensureXLSX(); } catch(e){
+    btn.disabled=false; btn.innerHTML='<i class="ti ti-refresh"></i> Muat Semua File dari Drive';
+    setGDStatus('penjualan','error','❌ Gagal memuat SheetJS library. Periksa koneksi internet.');
+    return;
+  }
+
+  let totalP=0, totalT=0, errP=0, errT=0;
+
+  // ── Load Penjualan folder ──
+  setGDStatus('penjualan','loading','⏳ Membaca daftar file dari folder Penjualan...');
+  let pFiles=[];
+  try {
+    pFiles = await fetchGDriveFolder('penjualan');
+    if(!pFiles.length){
+      setGDStatus('penjualan','info','ℹ️ Tidak ada file .xlsx di folder Penjualan.');
+    } else {
+      setGDStatus('penjualan','loading','⏳ Ditemukan '+pFiles.length+' file — mengunduh...');
+      setGDFiles('penjualan', pFiles);
+      for(const f of pFiles){
+        const statusEl = document.getElementById('gdstatus-'+f.id);
+        try {
+          const buf = await downloadGDriveFile(f.id);
+          const n = processGDriveXLSX(buf,'penjualan',f.name);
+          totalP += n;
+          if(statusEl) { statusEl.className='fstatus fstatus-ok'; statusEl.textContent='✅ '+n+' baris'; }
+        } catch(e){
+          errP++;
+          if(statusEl){ statusEl.className='fstatus fstatus-err'; statusEl.textContent='❌ Gagal'; }
+        }
+      }
+      setGDStatus('penjualan','success','✅ Folder Penjualan: '+pFiles.length+' file dimuat, '+totalP+' baris total.'+(errP?' ('+errP+' gagal)':''));
+    }
+  } catch(e){
+    setGDStatus('penjualan','error','❌ Gagal membaca folder Penjualan: '+e.message);
+  }
+
+  // ── Load Target folder ──
+  setGDStatus('target','loading','⏳ Membaca daftar file dari folder Target...');
+  let tFiles=[];
+  try {
+    tFiles = await fetchGDriveFolder('target');
+    if(!tFiles.length){
+      setGDStatus('target','info','ℹ️ Tidak ada file .xlsx di folder Target.');
+    } else {
+      setGDStatus('target','loading','⏳ Ditemukan '+tFiles.length+' file — mengunduh...');
+      setGDFiles('target', tFiles);
+      for(const f of tFiles){
+        const statusEl = document.getElementById('gdstatus-'+f.id);
+        try {
+          const buf = await downloadGDriveFile(f.id);
+          const n = processGDriveXLSX(buf,'target',f.name);
+          totalT += n;
+          if(statusEl){ statusEl.className='fstatus fstatus-ok'; statusEl.textContent='✅ '+n+' baris'; }
+        } catch(e){
+          errT++;
+          if(statusEl){ statusEl.className='fstatus fstatus-err'; statusEl.textContent='❌ Gagal'; }
+        }
+      }
+      setGDStatus('target','success','✅ Folder Target: '+tFiles.length+' file dimuat, '+totalT+' baris total.'+(errT?' ('+errT+' gagal)':''));
+    }
+  } catch(e){
+    setGDStatus('target','error','❌ Gagal membaca folder Target: '+e.message);
+  }
+
+  // Rebuild dashboard
+  const logs = rebuildHIST();
+  if(logs && logs.length){
+    document.getElementById('rbp-log').innerHTML = logs.join('<br>');
+    document.getElementById('rbp-log-section').style.display='block';
+  }
+
+  btn.disabled=false;
+  btn.innerHTML='<i class="ti ti-refresh" style="font-size:13px;"></i> Muat Ulang dari Drive';
+}
+
+function clearGDriveData(){
+  if(!confirm('Reset semua data yang dimuat dari Google Drive?')) return;
+  uploadedTargetRows=[];
+  uploadedPenjualanRows=[];
+  setGDStatus('penjualan','info','<b><i class="ti ti-info-circle"></i> Folder Penjualan</b> — Belum dimuat.');
+  setGDStatus('target','info','<b><i class="ti ti-info-circle"></i> Folder Target</b> — Belum dimuat.');
+  document.getElementById('gd-files-penjualan').innerHTML='';
+  document.getElementById('gd-files-target').innerHTML='';
+  document.getElementById('rbp-section').style.display='none';
+  rebuildHIST();
+}
+
+
+// Store raw file objects for Drive upload
+const pendingFiles = { target: null, penjualan: null };
+
+function handleUpload(input, type){
+  const file = input.files[0];
+  if(!file) return;
+  pendingFiles[type] = file; // simpan referensi file untuk upload ke Drive
+  const statusEl = document.getElementById('status-'+type);
+  const cardEl   = document.getElementById('card-'+type);
+
+  statusEl.className = 'upload-status loading';
+  statusEl.textContent = '⏳ Memproses '+file.name+'...';
+
+  // Sembunyikan tombol Drive dulu saat proses ulang
+  const saveWrap = document.getElementById('gdrive-save-'+type+'-wrap');
+  if(saveWrap) saveWrap.style.display = 'none';
+
+  const reader = new FileReader();
+  reader.onload = function(e){
+    const doProcess = () => processXLSX(e.target.result, type, file.name, statusEl, cardEl);
+    if(typeof XLSX === 'undefined'){
+      const s=document.createElement('script');
+      s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
+      s.onload=doProcess; document.head.appendChild(s);
+    } else { doProcess(); }
+  };
+  reader.onerror = ()=>{ statusEl.className='upload-status error'; statusEl.textContent='❌ Gagal membaca file.'; };
+  reader.readAsArrayBuffer(file);
+}
+
+function processXLSX(arrayBuffer, type, fileName, statusEl, cardEl){
+  try{
+    const data   = new Uint8Array(arrayBuffer);
+    const wb     = XLSX.read(data,{type:'array', cellDates:false});
+    const ws     = wb.Sheets[wb.SheetNames[0]];
+    const rows   = XLSX.utils.sheet_to_json(ws,{defval:null});
+
+    if(!rows.length){ statusEl.className='upload-status error'; statusEl.textContent='❌ File kosong.'; return; }
+
+    const normRows = rows.map(normRow);
+    const logLines = [];
+    logLines.push('📁 File: '+fileName);
+    logLines.push('📊 Total baris: '+normRows.length);
+
+    if(type==='target'){
+      uploadedTargetRows = normRows;
+
+      // Detect columns present
+      const sample = normRows[0];
+      const hasSalesmanid = 'salesmanid' in sample;
+      const hasBulan      = 'bulan' in sample;
+      const hasTahun      = 'tahun' in sample;
+      const hasTarget     = 'target_product' in sample;
+
+      logLines.push('🔑 Kolom terdeteksi: '+ Object.keys(sample).join(', '));
+      if(!hasSalesmanid) logLines.push('⚠️ Kolom "salesmanid" tidak ditemukan!');
+      if(!hasBulan)      logLines.push('⚠️ Kolom "bulan" tidak ditemukan!');
+      if(!hasTahun)      logLines.push('⚠️ Kolom "tahun" tidak ditemukan!');
+      if(!hasTarget)     logLines.push('⚠️ Kolom "target_product" tidak ditemukan!');
+
+      buildRBPTable();
+
+    } else {
+      uploadedPenjualanRows = normRows;
+
+      const sample = normRows[0];
+      logLines.push('🔑 Kolom terdeteksi: '+ Object.keys(sample).join(', '));
+
+      const hasSales  = 'salesperson' in sample;
+      const hasDate   = 'invoice_date' in sample;
+      const hasVal    = 'line_incl_ppn' in sample;
+      const hasQty    = 'qty_in_max_uom_breakdown' in sample;
+
+      if(!hasSales) logLines.push('⚠️ Kolom "Salesperson" tidak ditemukan!');
+      if(!hasDate)  logLines.push('⚠️ Kolom "Invoice Date" tidak ditemukan!');
+      if(!hasVal)   logLines.push('⚠️ Kolom "Line Incl Ppn" tidak ditemukan!');
+      if(!hasQty)   logLines.push('⚠️ Kolom "Qty In Max Uom Breakdown" tidak ditemukan!');
+
+      // Quick date check
+      if(hasDate){
+        const sample3 = normRows.slice(0,3).map(r=>r['invoice_date']);
+        logLines.push('📅 Contoh Invoice Date: '+ sample3.join(' | '));
+        const parsed = parseInvoiceDate(normRows[0]['invoice_date']);
+        if(parsed) logLines.push('📅 Parsed → Bulan: '+parsed.month+', Tahun: '+parsed.year);
+        else logLines.push('⚠️ Invoice Date tidak bisa di-parse. Cek formatnya.');
+      }
+    }
+
+    // Rebuild if we have both
+    const rebuildLogs = rebuildHIST();
+    if(rebuildLogs) rebuildLogs.forEach(l=>logLines.push(l));
+
+    // Show log
+    document.getElementById('upload-log').innerHTML = logLines.join('<br>');
+    document.getElementById('upload-log-section').style.display='block';
+
+    cardEl.classList.add('has-file');
+    statusEl.className='upload-status success';
+    statusEl.textContent='✅ '+fileName+' berhasil dimuat — '+normRows.length+' baris.';
+
+    // Tampilkan tombol simpan ke Google Drive jika Apps Script URL sudah ada
+    const scriptUrl = GD_APPS_SCRIPT_URLS && GD_APPS_SCRIPT_URLS.penjualan;
+    if(scriptUrl && scriptUrl.trim() && scriptUrl.includes('script.google.com')){
+      const saveWrap = document.getElementById('gdrive-save-'+type+'-wrap');
+      if(saveWrap){
+        saveWrap.style.display = 'block';
+        const saveStatusEl = document.getElementById('gdrive-save-status-'+type);
+        if(saveStatusEl){ saveStatusEl.className='gdrive-status-box'; saveStatusEl.style.display='none'; }
+      }
+    }
+
+  } catch(err){
+    statusEl.className='upload-status error';
+    statusEl.textContent='❌ Error: '+err.message;
+    console.error(err);
+  }
+}
+
+
+// ── Fallback: upload via hidden form+iframe untuk bypass CORS ──
+function uploadViaIframe(scriptUrl, payload){
+  return new Promise((resolve, reject)=>{
+    const iframeId = 'upload-iframe-'+Date.now();
+    const formId   = 'upload-form-'+Date.now();
+
+    const iframe = document.createElement('iframe');
+    iframe.id   = iframeId;
+    iframe.name = iframeId;
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const form = document.createElement('form');
+    form.id     = formId;
+    form.method = 'POST';
+    form.action = scriptUrl;
+    form.target = iframeId;
+    form.style.display = 'none';
+
+    const input = document.createElement('input');
+    input.type  = 'hidden';
+    input.name  = 'payload';
+    input.value = payload;
+    form.appendChild(input);
+    document.body.appendChild(form);
+
+    let settled = false;
+    const timeout = setTimeout(()=>{
+      if(settled) return;
+      settled = true;
+      cleanup();
+      // iframe POST berhasil kirim tapi kita tidak bisa baca response (cross-origin)
+      // Anggap sukses karena tidak ada error network
+      resolve({success: true, fileName: JSON.parse(payload).fileName, fileId: 'via-iframe'});
+    }, 12000);
+
+    iframe.onload = ()=>{
+      if(settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      cleanup();
+      // Coba baca response jika same-origin, kalau tidak bisa anggap sukses
+      try {
+        const txt = iframe.contentDocument.body.innerText;
+        const res = JSON.parse(txt);
+        if(res.error) reject(new Error(res.error));
+        else resolve(res);
+      } catch(e){
+        // Cross-origin: tidak bisa baca response, tapi request sudah terkirim
+        resolve({success: true, fileName: JSON.parse(payload).fileName, fileId: 'via-iframe'});
+      }
+    };
+
+    iframe.onerror = ()=>{
+      if(settled) return;
+      settled = true;
+      clearTimeout(timeout);
+      cleanup();
+      reject(new Error('Gagal menghubungi Apps Script via iframe.'));
+    };
+
+    function cleanup(){
+      try{ document.body.removeChild(iframe); }catch(e){}
+      try{ document.body.removeChild(form); }catch(e){}
+    }
+
+    form.submit();
+  });
+}
+
+// ══════════════════════════════════════════════════════
+// UPLOAD FILE KE GOOGLE DRIVE via Apps Script doPost
+// ══════════════════════════════════════════════════════
+async function saveFileToDrive(type){
+  const file = pendingFiles[type];
+  if(!file){
+    alert('Tidak ada file yang dipilih untuk tipe: '+type);
+    return;
+  }
+
+  const scriptUrl = (GD_APPS_SCRIPT_URLS && GD_APPS_SCRIPT_URLS[type] || '').trim();
+  if(!scriptUrl || !scriptUrl.includes('script.google.com')){
+    alert('URL Apps Script belum dikonfigurasi. Buka tab Google Drive di Settings dan isi URL Apps Script terlebih dahulu.');
+    return;
+  }
+
+  const folderId = GD_FOLDER_IDS[type];
+  if(!folderId){
+    alert('Folder ID untuk '+type+' belum dikonfigurasi.');
+    return;
+  }
+
+  const btn = document.getElementById('btn-save-'+type);
+  const statusEl = document.getElementById('gdrive-save-status-'+type);
+
+  btn.disabled = true;
+  btn.innerHTML = '<i class="ti ti-loader-2" style="font-size:13px;animation:spin 1s linear infinite;"></i> Mengunggah ke Drive...';
+  statusEl.className = 'gdrive-status-box loading';
+  statusEl.style.display = 'block';
+  statusEl.textContent = '⏳ Mengirim file ke Google Drive... (mohon tunggu ~5 detik)';
+
+  try {
+    // Baca file sebagai ArrayBuffer lalu konversi ke base64
+    const arrayBuffer = await file.arrayBuffer();
+    const uint8 = new Uint8Array(arrayBuffer);
+    let binary = '';
+    // Chunk agar tidak stack overflow pada file besar
+    const CHUNK = 8192;
+    for(let i=0; i<uint8.length; i+=CHUNK){
+      binary += String.fromCharCode.apply(null, uint8.subarray(i, i+CHUNK));
+    }
+    const base64 = btoa(binary);
+
+    // Kirim ke Apps Script via fetch dengan mode no-cors
+    // Apps Script menerima POST dengan Content-Type text/plain → tidak trigger preflight
+    const payload = JSON.stringify({
+      folderId: folderId,
+      fileName: file.name,
+      fileData: base64,
+      mimeType: file.type || 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    });
+
+    let result;
+    try {
+      // Kirim dengan fetch no-cors — request pasti terkirim ke Apps Script
+      // tapi response tidak bisa dibaca (opaque). Kita verifikasi via doGet setelahnya.
+      await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload
+      });
+      // Tunggu sebentar agar Apps Script selesai proses
+      await new Promise(r => setTimeout(r, 3000));
+      // Verifikasi: cek apakah file sudah ada di folder Drive via doGet
+      const checkUrl = scriptUrl + '?folderId=' + folderId + '&t=' + Date.now();
+      const checkResp = await fetch(checkUrl);
+      const checkData = await checkResp.json();
+      const found = (checkData.files || []).find(f => f.name === file.name);
+      if(found){
+        result = { success: true, fileName: found.name, fileId: found.id };
+      } else {
+        throw new Error('File terkirim tapi belum muncul di Drive. Coba muat ulang dari tab Google Drive.');
+      }
+    } catch(fetchErr){
+      throw new Error(fetchErr.message || 'Gagal mengirim file ke Apps Script.');
+    }
+
+    statusEl.className = 'gdrive-status-box success';
+    statusEl.innerHTML = '✅ File <b>'+result.fileName+'</b> berhasil disimpan ke Google Drive!<br><span style="font-size:10px;color:#2D7A3A;">File ID: '+result.fileId+'</span>';
+    btn.innerHTML = '<i class="ti ti-circle-check" style="font-size:13px;"></i> Tersimpan di Drive';
+
+    // ── AUTO-RELOAD: muat ulang semua file dari Drive setelah upload berhasil ──
+    setTimeout(async ()=>{
+      statusEl.innerHTML += '<br><span style="font-size:10px;color:#0C447C;">⏳ Memuat ulang semua file dari Drive...</span>';
+      try {
+        await loadFromGDrive();
+        statusEl.innerHTML += '<br><span style="font-size:10px;color:#1B6A2E;">✅ Dashboard diperbarui dari Drive.</span>';
+      } catch(e){
+        statusEl.innerHTML += '<br><span style="font-size:10px;color:#8A2020;">⚠️ Gagal reload otomatis. Klik "Muat Semua File" manual.</span>';
+      }
+    }, 800);
+
+    // Reset tombol setelah 4 detik
+    setTimeout(()=>{
+      btn.disabled = false;
+      const label = type==='target' ? 'Folder Target' : 'Folder Penjualan';
+      btn.innerHTML = '<i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive ('+label+')';
+    }, 4000);
+
+  } catch(err){
+    statusEl.className = 'gdrive-status-box error';
+    statusEl.style.display = 'block';
+    statusEl.textContent = '❌ Gagal: ' + err.message;
+    btn.disabled = false;
+    const label = type==='target' ? 'Folder Target' : 'Folder Penjualan';
+    btn.innerHTML = '<i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive ('+label+')';
+    console.error('saveFileToDrive error:', err);
+  }
+}
+
+function showAppsScriptGuide(){
+  const el = document.getElementById('apps-script-guide');
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+function copyAppsScript(){
+  const code = document.getElementById('apps-script-code').textContent;
+  navigator.clipboard.writeText(code).then(()=>{
+    const btn = document.getElementById('btn-copy-script');
+    btn.textContent = '✅ Copied!';
+    setTimeout(()=>btn.textContent='Copy', 2000);
+  }).catch(()=>{
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = code; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.getElementById('btn-copy-script');
+    btn.textContent = '✅ Copied!';
+    setTimeout(()=>btn.textContent='Copy', 2000);
+  });
+}
+
+function saveScriptUrl(val){
+  const url = val.trim();
+  GD_APPS_SCRIPT_URLS.penjualan = url;
+  GD_APPS_SCRIPT_URLS.target    = url;
+  // Persist in localStorage
+  try { localStorage.setItem('gd_script_url', url); } catch(e){}
+}
+
+// Sync input field with hardcoded URL on load (localStorage override if user changed it)
+// Lalu auto-load dari Google Drive jika URL sudah terkonfigurasi
+(function(){
+  try {
+    const saved = localStorage.getItem('gd_script_url');
+    const url = saved || GD_APPS_SCRIPT_URLS.penjualan;
+    if(url){
+      GD_APPS_SCRIPT_URLS.penjualan = url;
+      GD_APPS_SCRIPT_URLS.target    = url;
+      const el = document.getElementById('gd-script-url');
+      if(el) el.value = url;
+    }
+  } catch(e){}
+
+  // ── AUTO-LOAD: muat Drive otomatis saat halaman dibuka ──
+  // Hanya jalan jika URL Apps Script valid (bukan placeholder)
+  window.addEventListener('load', function(){
+    const scriptUrl = (GD_APPS_SCRIPT_URLS.penjualan || '').trim();
+    if(scriptUrl && scriptUrl.includes('script.google.com')){
+      // Tampilkan notifikasi kecil di dashboard
+      showAutoLoadBanner('⏳ Memuat data dari Google Drive secara otomatis...');
+      loadFromGDrive().then(()=>{
+        showAutoLoadBanner('✅ Data Google Drive berhasil dimuat otomatis.', true);
+      }).catch(()=>{
+        showAutoLoadBanner('⚠️ Gagal memuat otomatis dari Drive. Klik "Muat Semua File" di Settings.', false, true);
+      });
+    }
+  });
+})();
+
+// ── Banner notifikasi auto-load (muncul di atas dashboard) ──
+function showAutoLoadBanner(msg, isSuccess, isWarn){
+  let banner = document.getElementById('autoload-banner');
+  if(!banner){
+    banner = document.createElement('div');
+    banner.id = 'autoload-banner';
+    banner.style.cssText = 'position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:9999;padding:9px 20px;border-radius:30px;font-size:12px;font-weight:600;box-shadow:0 4px 18px rgba(0,0,0,0.15);transition:opacity 0.4s;display:flex;align-items:center;gap:8px;white-space:nowrap;max-width:90vw;';
+    document.body.appendChild(banner);
+  }
+  if(isSuccess){
+    banner.style.background='#E6F5EB'; banner.style.color='#1B6A2E'; banner.style.border='1px solid #2EAA4A';
+  } else if(isWarn){
+    banner.style.background='#FBF3E0'; banner.style.color='#6A4A10'; banner.style.border='1px solid #E8A020';
+  } else {
+    banner.style.background='#E6EEF8'; banner.style.color='#0C447C'; banner.style.border='1px solid #2A5BA8';
+  }
+  banner.style.opacity='1';
+  banner.textContent = msg;
+  if(isSuccess || isWarn){
+    setTimeout(()=>{ banner.style.opacity='0'; setTimeout(()=>banner.remove(),400); }, 3500);
+  }
+}
+
+
 </script>
-
-<!-- ═══════════════════════════════════════
-     MODAL LOGIN ADMIN
-═══════════════════════════════════════ -->
-<div class="modal-overlay" id="loginModal" style="z-index:1100;">
-  <div class="modal-box" style="max-width:380px;">
-    <div class="modal-header">
-      <div class="modal-title">
-        <i class="ti ti-lock" style="font-size:16px;"></i>
-        Login Admin
-      </div>
-      <button class="modal-close" onclick="closeLoginModal()">✕</button>
-    </div>
-    <div class="modal-body" style="gap:14px;">
-      <div style="font-size:12px;color:var(--text-secondary);background:var(--bg-secondary);padding:10px 14px;border-radius:8px;">
-        <i class="ti ti-info-circle" style="margin-right:4px;"></i>
-        Masuk sebagai admin untuk mengupload dan memperbarui data.
-      </div>
-      <div>
-        <label style="font-size:11px;font-weight:500;color:var(--text-secondary);display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.4px;">Password</label>
-        <input type="password" id="login-pw" placeholder="Masukkan password admin"
-          style="width:100%;border:1.5px solid var(--bdr);border-radius:8px;padding:9px 12px;font-size:13px;outline:none;font-family:inherit;transition:border 0.15s;"
-          onfocus="this.style.borderColor='#1B3F7A'" onblur="this.style.borderColor=''"
-          onkeydown="if(event.key==='Enter')doLogin()">
-        <div id="login-error" style="color:#8A2020;font-size:11px;margin-top:6px;min-height:16px;"></div>
-      </div>
-    </div>
-    <div class="modal-footer">
-      <span class="footer-hint">Hanya admin yang dapat mengupload data.</span>
-      <button class="btn-process" onclick="doLogin()">
-        <i class="ti ti-lock-open"></i> Masuk
-      </button>
-    </div>
-  </div>
-</div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </body>
 </html>
