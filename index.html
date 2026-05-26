@@ -1661,121 +1661,41 @@ function processXLSX(arrayBuffer, type, fileName, statusEl, cardEl){
 }
 
 
-// ── Fallback: upload via hidden form+iframe untuk bypass CORS ──
-function uploadViaIframe(scriptUrl, payload){
-  return new Promise((resolve, reject)=>{
-    const iframeId = 'upload-iframe-'+Date.now();
-    const formId   = 'upload-form-'+Date.now();
-
-    const iframe = document.createElement('iframe');
-    iframe.id   = iframeId;
-    iframe.name = iframeId;
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-
-    const form = document.createElement('form');
-    form.id     = formId;
-    form.method = 'POST';
-    form.action = scriptUrl;
-    form.target = iframeId;
-    form.style.display = 'none';
-
-    const input = document.createElement('input');
-    input.type  = 'hidden';
-    input.name  = 'payload';
-    input.value = payload;
-    form.appendChild(input);
-    document.body.appendChild(form);
-
-    let settled = false;
-    const timeout = setTimeout(()=>{
-      if(settled) return;
-      settled = true;
-      cleanup();
-      // iframe POST berhasil kirim tapi kita tidak bisa baca response (cross-origin)
-      // Anggap sukses karena tidak ada error network
-      resolve({success: true, fileName: JSON.parse(payload).fileName, fileId: 'via-iframe'});
-    }, 12000);
-
-    iframe.onload = ()=>{
-      if(settled) return;
-      settled = true;
-      clearTimeout(timeout);
-      cleanup();
-      // Coba baca response jika same-origin, kalau tidak bisa anggap sukses
-      try {
-        const txt = iframe.contentDocument.body.innerText;
-        const res = JSON.parse(txt);
-        if(res.error) reject(new Error(res.error));
-        else resolve(res);
-      } catch(e){
-        // Cross-origin: tidak bisa baca response, tapi request sudah terkirim
-        resolve({success: true, fileName: JSON.parse(payload).fileName, fileId: 'via-iframe'});
-      }
-    };
-
-    iframe.onerror = ()=>{
-      if(settled) return;
-      settled = true;
-      clearTimeout(timeout);
-      cleanup();
-      reject(new Error('Gagal menghubungi Apps Script via iframe.'));
-    };
-
-    function cleanup(){
-      try{ document.body.removeChild(iframe); }catch(e){}
-      try{ document.body.removeChild(form); }catch(e){}
-    }
-
-    form.submit();
-  });
-}
-
+// ══════════════════════════════════════════════════════
 // ══════════════════════════════════════════════════════
 // UPLOAD FILE KE GOOGLE DRIVE via Apps Script doPost
 // ══════════════════════════════════════════════════════
 async function saveFileToDrive(type){
   const file = pendingFiles[type];
-  if(!file){
-    alert('Tidak ada file yang dipilih untuk tipe: '+type);
-    return;
-  }
+  if(!file){ alert('Tidak ada file yang dipilih untuk tipe: '+type); return; }
 
   const scriptUrl = (GD_APPS_SCRIPT_URLS && GD_APPS_SCRIPT_URLS[type] || '').trim();
   if(!scriptUrl || !scriptUrl.includes('script.google.com')){
-    alert('URL Apps Script belum dikonfigurasi. Buka tab Google Drive di Settings dan isi URL Apps Script terlebih dahulu.');
+    alert('URL Apps Script belum dikonfigurasi.');
     return;
   }
 
   const folderId = GD_FOLDER_IDS[type];
-  if(!folderId){
-    alert('Folder ID untuk '+type+' belum dikonfigurasi.');
-    return;
-  }
+  if(!folderId){ alert('Folder ID untuk '+type+' belum dikonfigurasi.'); return; }
 
   const btn = document.getElementById('btn-save-'+type);
   const statusEl = document.getElementById('gdrive-save-status-'+type);
-
   btn.disabled = true;
   btn.innerHTML = '<i class="ti ti-loader-2" style="font-size:13px;animation:spin 1s linear infinite;"></i> Mengunggah ke Drive...';
   statusEl.className = 'gdrive-status-box loading';
   statusEl.style.display = 'block';
-  statusEl.textContent = '⏳ Mengirim file ke Google Drive... (mohon tunggu ~5 detik)';
+  statusEl.textContent = '⏳ Membaca file dan mengirim ke Google Drive...';
 
   try {
-    // Baca file sebagai ArrayBuffer lalu konversi ke base64
     const arrayBuffer = await file.arrayBuffer();
     const uint8 = new Uint8Array(arrayBuffer);
     let binary = '';
-    // Chunk agar tidak stack overflow pada file besar
     const CHUNK = 8192;
     for(let i=0; i<uint8.length; i+=CHUNK){
       binary += String.fromCharCode.apply(null, uint8.subarray(i, i+CHUNK));
     }
     const base64 = btoa(binary);
 
-    // Kirim ke Apps Script via fetch dengan mode no-cors
-    // Apps Script menerima POST dengan Content-Type text/plain → tidak trigger preflight
     const payload = JSON.stringify({
       folderId: folderId,
       fileName: file.name,
@@ -1783,62 +1703,42 @@ async function saveFileToDrive(type){
       mimeType: file.type || 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     });
 
-    let result;
-    try {
-      // Kirim dengan fetch no-cors — request pasti terkirim ke Apps Script
-      // tapi response tidak bisa dibaca (opaque). Kita verifikasi via doGet setelahnya.
-      await fetch(scriptUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: payload
-      });
-      // Tunggu sebentar agar Apps Script selesai proses
-      await new Promise(r => setTimeout(r, 3000));
-      // Verifikasi: cek apakah file sudah ada di folder Drive via doGet
-      const checkUrl = scriptUrl + '?folderId=' + folderId + '&t=' + Date.now();
-      const checkResp = await fetch(checkUrl);
-      const checkData = await checkResp.json();
-      const found = (checkData.files || []).find(f => f.name === file.name);
-      if(found){
-        result = { success: true, fileName: found.name, fileId: found.id };
-      } else {
-        throw new Error('File terkirim tapi belum muncul di Drive. Coba muat ulang dari tab Google Drive.');
-      }
-    } catch(fetchErr){
-      throw new Error(fetchErr.message || 'Gagal mengirim file ke Apps Script.');
-    }
+    const resp = await fetch(scriptUrl, {
+      method: 'POST',
+      body: payload
+    });
+    if(!resp.ok) throw new Error('HTTP ' + resp.status);
+    const result = await resp.json();
+    if(result.error) throw new Error(result.error);
 
     statusEl.className = 'gdrive-status-box success';
     statusEl.innerHTML = '✅ File <b>'+result.fileName+'</b> berhasil disimpan ke Google Drive!<br><span style="font-size:10px;color:#2D7A3A;">File ID: '+result.fileId+'</span>';
     btn.innerHTML = '<i class="ti ti-circle-check" style="font-size:13px;"></i> Tersimpan di Drive';
 
-    // ── AUTO-RELOAD: muat ulang semua file dari Drive setelah upload berhasil ──
     setTimeout(async ()=>{
       statusEl.innerHTML += '<br><span style="font-size:10px;color:#0C447C;">⏳ Memuat ulang semua file dari Drive...</span>';
-      try {
-        await loadFromGDrive();
-        statusEl.innerHTML += '<br><span style="font-size:10px;color:#1B6A2E;">✅ Dashboard diperbarui dari Drive.</span>';
-      } catch(e){
-        statusEl.innerHTML += '<br><span style="font-size:10px;color:#8A2020;">⚠️ Gagal reload otomatis. Klik "Muat Semua File" manual.</span>';
-      }
+      try { await loadFromGDrive(); statusEl.innerHTML += '<br><span style="font-size:10px;color:#1B6A2E;">✅ Dashboard diperbarui dari Drive.</span>'; }
+      catch(e){ statusEl.innerHTML += '<br><span style="font-size:10px;color:#8A2020;">⚠️ Gagal reload otomatis.</span>'; }
     }, 800);
 
-    // Reset tombol setelah 4 detik
     setTimeout(()=>{
       btn.disabled = false;
-      const label = type==='target' ? 'Folder Target' : 'Folder Penjualan';
+      const label = type==='target'?'Folder Target':'Folder Penjualan';
       btn.innerHTML = '<i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive ('+label+')';
-    }, 4000);
+    }, 5000);
 
   } catch(err){
     statusEl.className = 'gdrive-status-box error';
     statusEl.style.display = 'block';
     statusEl.textContent = '❌ Gagal: ' + err.message;
     btn.disabled = false;
-    const label = type==='target' ? 'Folder Target' : 'Folder Penjualan';
+    const label = type==='target'?'Folder Target':'Folder Penjualan';
     btn.innerHTML = '<i class="ti ti-brand-google-drive" style="font-size:13px;"></i> Simpan ke Google Drive ('+label+')';
     console.error('saveFileToDrive error:', err);
   }
+}
+
+
 }
 
 function showAppsScriptGuide(){
